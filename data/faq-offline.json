@@ -1,0 +1,124 @@
+{
+  "faqs": [
+    {
+      "id": "faq-1",
+      "keywords": ["vote", "how", "cast", "voting process"],
+      "question": "How do I cast my vote?",
+      "answer": "To vote in India:\n1. Go to your designated polling booth (find it on voters.eci.gov.in)\n2. Carry your Voter ID (EPIC) or any approved alternative document (Aadhaar, Passport, Driving Licence, etc.)\n3. Join the queue — there are separate queues for men and women\n4. Polling officer will verify your identity and mark your name in the register\n5. Your left index finger is marked with indelible ink\n6. You receive a voting slip\n7. Go to the EVM — press the button next to your candidate's name\n8. A beep confirms your vote. The VVPAT shows a paper slip for 7 seconds\n9. Your vote is cast! Booths are open from 7 AM to 6 PM."
+    },
+    {
+      "id": "faq-2",
+      "keywords": ["register", "voter id", "enroll", "how to register"],
+      "question": "How do I register as a voter?",
+      "answer": "To register as a voter in India:\n1. Visit voters.eci.gov.in or download the Voter Helpline App\n2. Click 'New Voter Registration' and fill Form 6\n3. You need: Aadhaar number or address proof, passport photo\n4. Submit online or at your nearest BLO (Booth Level Officer)\n5. After verification, your name will be added to the electoral roll\n6. You will receive your EPIC (Voter ID card) by post\n\nEligibility: Indian citizen, 18+ years old, residing at the address for which you are registering."
+    },
+    {
+      "id": "faq-3",
+      "keywords": ["evm", "electronic voting", "how evm works", "voting machine"],
+      "question": "How does the EVM work?",
+      "answer": "EVM (Electronic Voting Machine) has two units:\n\n🔵 Ballot Unit (you use this): Has buttons next to each candidate's name and party symbol. Press your candidate's button.\n\n🟢 Control Unit (polling officer controls): Records and stores votes securely. Each EVM can hold up to 3,840 votes.\n\nSecurity features:\n• No internet or wireless connectivity — cannot be hacked remotely\n• One-time programmable chip — cannot be reprogrammed\n• After polls, EVMs are sealed with candidate representatives as witnesses\n• Strong rooms are guarded by central security forces"
+    },
+    {
+      "id": "faq-4",
+      "keywords": ["vvpat", "paper slip", "verify vote"],
+      "question": "What is VVPAT and how does it verify my vote?",
+      "answer": "VVPAT (Voter Verifiable Paper Audit Trail) is attached to the EVM.\n\nAfter you press your candidate's button:\n1. A paper slip prints in the VVPAT\n2. The slip shows: candidate's name, number, and party symbol\n3. You can see it through a glass window for exactly 7 seconds\n4. The slip automatically cuts and drops into a sealed VVPAT box\n\nYou cannot take the slip home — it is for verification only. In case of dispute, VVPAT slips from 5 randomly selected booths per constituency are counted to match EVM tallies."
+    },
+    {
+      "id": "faq-5",
+      "keywords": ["eligible", "can I vote", "eligibility", "who can vote"],
+      "question": "Who is eligible to vote in India?",
+      "answer": "You can vote in India if:\n✅ You are an Indian citizen\n✅ You are 18 years or older (on January 1 of the qualifying year)\n✅ Your name is registered on the electoral roll of your constituency\n✅ You are not disqualified under any law\n\nYou CANNOT vote if:\n❌ You are declared to be of unsound mind\n❌ You have been disqualified due to corrupt electoral practices\n❌ You are a non-citizen\n\nNRI (Non-Resident Indian) citizens CAN vote but must be physically present at their constituency polling booth."
+    },
+    {
+      "id": "faq-6",
+      "keywords": ["nota", "none of above", "reject all candidates"],
+      "question": "What is NOTA and should I use it?",
+      "answer": "NOTA = None of the Above. It is the last option on every EVM.\n\nWhen to use NOTA:\n• When you find all candidates in your constituency unacceptable\n• To send a message of dissatisfaction\n\nImportant facts about NOTA:\n• Your vote is counted and recorded\n• BUT: NOTA cannot win. Even if NOTA gets the most votes, the candidate with the highest number of votes among candidates wins\n• NOTA is represented by a cross (✗) symbol on the EVM\n• Introduced in India in 2013 after a Supreme Court order"
+    },
+    {
+      "id": "faq-7",
+      "keywords": ["lok sabha", "parliament", "mp", "member of parliament"],
+      "question": "What is the Lok Sabha?",
+      "answer": "The Lok Sabha (House of the People) is the lower house of India's Parliament.\n\nKey facts:\n• 543 elected seats (+ 2 nominated by President, now abolished)\n• Each Lok Sabha seat = one parliamentary constituency\n• Elected by citizens through direct voting (you vote directly for your MP)\n• Term: 5 years (can be dissolved earlier)\n• Minimum age to become MP: 25 years\n• Party/alliance with majority (272+ seats) forms the government\n• Prime Minister must have support of Lok Sabha majority\n\nYour MP (Member of Parliament) represents your constituency's 10-20 lakh voters."
+    },
+    {
+      "id": "faq-8",
+      "keywords": ["model code of conduct", "mcc", "election rules", "campaign rules"],
+      "question": "What is the Model Code of Conduct?",
+      "answer": "MCC (Model Code of Conduct) is a set of guidelines by ECI that kicks in the moment elections are announced.\n\nWhat it PREVENTS the government from doing:\n🚫 Announcing new government schemes or welfare programs\n🚫 Using government vehicles, buildings or officials for campaigning\n🚫 Making new appointments of key officials without ECI permission\n🚫 Using state-funded media for party advertising\n\nWhat it PREVENTS all parties from doing:\n🚫 Appealing to voters on caste or religion grounds\n🚫 Using money/gifts/alcohol to influence voters (bribery)\n🚫 Making derogatory personal attacks on opponents\n\nDuration: From election announcement until results are declared."
+    },
+    {
+      "id": "faq-9",
+      "keywords": ["polling booth", "find booth", "where to vote"],
+      "question": "How do I find my polling booth?",
+      "answer": "To find your polling booth:\n\n📱 Online: Visit voters.eci.gov.in → 'Know Your Polling Station'\n📞 SMS: Send 'ECISEARCH' to 1950\n📲 App: Download 'Voter Helpline' app (available on Android & iOS)\n☎️ Call: 1950 (National Voter Helpline — toll free)\n\nYour polling booth details are also printed on your Voter Slip which is delivered to your house a few days before polling day.\n\nPolling booths are typically within 2 km of your home and in schools, community halls or government buildings."
+    },
+    {
+      "id": "faq-10",
+      "keywords": ["counting", "results", "how are votes counted"],
+      "question": "How are votes counted after polling?",
+      "answer": "Vote counting in India:\n\n1. 📦 EVMs are sealed and stored in strong rooms under security after polls close\n2. 📅 Counting happens on a date set by ECI (usually a few weeks after last phase)\n3. 🏛️ Counting centres are set up, usually in government buildings\n4. 👥 Counting agents from each party are present as observers\n5. 🔢 EVMs are brought out and results displayed round by round\n6. 📊 Postal ballots (from armed forces, etc.) are counted first\n7. 🏆 After all rounds, the candidate with most votes wins\n8. 📜 Returning Officer declares the winner and issues Election Certificate\n\nECI updates results live at results.eci.gov.in during counting."
+    },
+    {
+      "id": "faq-11",
+      "keywords": ["eci", "election commission", "who conducts election"],
+      "question": "Who is responsible for conducting elections in India?",
+      "answer": "The Election Commission of India (ECI) conducts:\n• Lok Sabha elections\n• Rajya Sabha elections  \n• State Legislative Assembly elections\n• Presidential and Vice-Presidential elections\n\nECI is a constitutional body under Article 324, independent of the government. It is headed by the Chief Election Commissioner (CEC) and two Election Commissioners.\n\nFor LOCAL elections (Municipal Corporations, Gram Panchayats), each State has its own State Election Commission (SEC) which operates separately from ECI.\n\nECI website: eci.gov.in | Helpline: 1950"
+    },
+    {
+      "id": "faq-12",
+      "keywords": ["election day", "what to bring", "documents", "id proof"],
+      "question": "What should I bring on election day?",
+      "answer": "On election day, carry ANY ONE of these 12 approved documents:\n\n1. Voter ID (EPIC card)\n2. Aadhaar Card\n3. Passport\n4. Driving Licence\n5. MNREGA Job Card\n6. Bank/Post Office Passbook with photo\n7. Health Insurance Smart Card (ESIC/RSBY)\n8. Pension document with photo\n9. Official identity cards from Central/State Govt\n10. MP/MLA/MLC official identity cards\n11. PAN Card\n12. Smart Card issued by RGI under NPR\n\nAlso bring your Voter Slip (delivered to your house before election day) — this speeds up the process at the booth."
+    },
+    {
+      "id": "faq-13",
+      "keywords": ["us election", "america", "president", "electoral college"],
+      "question": "How is the US President elected?",
+      "answer": "The US President is NOT elected directly by citizens. Here's how it works:\n\n1. 🗳️ Citizens vote on Election Day (first Tuesday after first Monday in November)\n2. 🗺️ They are technically voting for 'Electors' in their state\n3. 📊 Each state has a number of Electors equal to its Congress members\n4. 🏆 In most states, winner takes ALL electors (winner-take-all system)\n5. Total: 538 electors → Need 270 to win\n6. 📅 Electors meet in December to formally cast votes\n7. Congress certifies results in January\n8. 🎉 New President inaugurated on January 20\n\nThis is why a candidate can win the 'popular vote' but lose the election (as happened in 2000 and 2016)."
+    },
+    {
+      "id": "faq-14",
+      "keywords": ["how many phases", "lok sabha phases", "why multiple phases"],
+      "question": "Why does the Lok Sabha election happen in multiple phases?",
+      "answer": "The 2024 Lok Sabha election had 7 phases spread over 6 weeks. Why?\n\n🔒 Security: India has only ~1 million security personnel (police + paramilitary) but 10 lakh+ polling booths. Staggering phases allows the same security forces to cover different regions.\n\n📍 Geography: India's size and terrain makes single-day voting impossible. Remote areas need extra time for EVM transport.\n\n✅ Fair enforcement of MCC: Easier to monitor with phased approach.\n\nPhase breakdown (2024):\n• Phase 1: 102 seats — Apr 19\n• Phase 2: 89 seats — Apr 26\n• Phases 3-7 continue through June 1\n• Counting: June 4\n\nThe Supreme Court and ECI ensure that results of earlier phases are not announced until all phases are complete."
+    },
+    {
+      "id": "faq-15",
+      "keywords": ["rural", "village", "gaon", "panchayat", "gram"],
+      "question": "How does voting work in villages and rural areas?",
+      "answer": "For rural and village voters in India:\n\n📍 BOOTH LOCATION: Polling booth is within 2 km of your home — guaranteed by ECI rules.\n\n🗳️ PANCHAYAT ELECTIONS: Conducted by State Election Commission (SEC), not ECI. Often use paper ballots instead of EVMs.\n\n👨‍👩‍👧‍👦 VILLAGE VOTING PROCESS:\n1. Village Pradhan (head) often guides first-time voters\n2. BLO (Booth Level Officer) visits homes to update voter lists\n3. Voter slips delivered to homes before election\n\n📱 NO SMARTPHONE NEEDED: You can call 1950 (free) to find your booth or ask your local BLO.\n\n🚌 TRANSPORT: ECI ensures transport to booths in remote areas.\n\n🔴 IMPORTANT: Your vote is completely SECRET — no one can see how you voted."
+    },
+    {
+      "id": "faq-16",
+      "keywords": ["secret ballot", "privacy", "anonymous", "who can see my vote"],
+      "question": "Is my vote really secret? Can anyone see how I voted?",
+      "answer": "YES — your vote is completely secret and anonymous. Here's how it is protected:\n\n🔒 EVMs do NOT record WHO voted for WHOM. They only count total votes per candidate.\n\n🖊️ The ink mark on your finger proves you voted — not HOW you voted.\n\n👁️ There are NO cameras inside the voting compartment.\n\n📝 Polling officers do NOT see your vote — the EVM beep confirms vote was cast, not which candidate.\n\n⚖️ Secret ballot is a fundamental principle of democracy protected by the Representation of the People Act.\n\nVote freely and fearlessly — your choice is always private!"
+    },
+    {
+      "id": "faq-17",
+      "keywords": ["nri", "overseas", "abroad", "foreign", "diaspora voting"],
+      "question": "Can NRIs (Indians living abroad) vote?",
+      "answer": "NRIs CAN vote in Indian elections, but with limitations:\n\n✅ ALLOWED:\n• NRI voters who are Indian citizens (not holding foreign citizenship)\n• Must be registered on electoral roll of their home constituency in India\n• Must be PHYSICALLY PRESENT at their constituency polling booth to vote\n\n❌ NOT ALLOWED:\n• Postal voting for NRIs is NOT yet implemented (proposed many times)\n• Cannot vote from abroad or at Indian embassies\n\nTO REGISTER AS NRI VOTER:\n• Fill Form 6A on voters.eci.gov.in\n• Provide proof of Indian citizenship and overseas address\n• Your name will be added to the electoral roll of your last registered Indian address\n\nThis means most NRIs would have to travel back to India to vote."
+    },
+    {
+      "id": "faq-18",
+      "keywords": ["first time voter", "new voter", "student voter", "young voter"],
+      "question": "I'm a first-time voter. What should I know?",
+      "answer": "Welcome to democracy! Here's your first-time voter checklist:\n\n✅ STEP 1 — REGISTER:\n• Visit voters.eci.gov.in and fill Form 6\n• Need: Aadhaar, address proof, passport photo\n• Do this at least 1 month before election day\n\n✅ STEP 2 — CHECK YOUR NAME:\n• Visit voters.eci.gov.in → 'Search in Electoral Roll'\n• Or SMS: 'ECI <your EPIC number>' to 1950\n\n✅ STEP 3 — FIND YOUR BOOTH:\n• Visit voters.eci.gov.in → 'Know Your Polling Station'\n\n✅ ON ELECTION DAY:\n• Carry any one valid ID (EPIC, Aadhaar, Passport, etc.)\n• Bring your voter slip\n• Arrive before 6 PM\n• Your vote is COMPLETELY SECRET — vote freely!\n\n🎯 Remember: In 2024, turnout was 66.3%. Your single vote CAN make a difference!"
+    },
+    {
+      "id": "faq-19",
+      "keywords": ["disability", "wheelchair", "blind", "handicapped", "divyang"],
+      "question": "How can people with disabilities vote?",
+      "answer": "ECI has made special provisions for Divyang (differently abled) voters:\n\n♿ PHYSICAL ACCESSIBILITY:\n• All polling stations must have ramps\n• Priority queue for voters with disabilities\n• Wheelchairs available at booths\n• Companion assistance allowed inside the booth\n\n👁️ FOR VISUALLY IMPAIRED VOTERS:\n• Braille labels on EVMs\n• Companion can assist in marking vote\n• EVM buttons have tactile symbols\n\n🚗 TRANSPORT:\n• Free pickup and drop available in many states\n• Register your need at 1950\n\n📮 POSTAL BALLOT:\n• Voters with disabilities (40%+ disability certificate) can request postal ballot and vote from home\n\n📱 SAKSHAM APP:\n• ECI's app specifically for voters with disabilities\n• Register and track your postal ballot"
+    },
+    {
+      "id": "faq-20",
+      "keywords": ["bribe", "money", "gift", "alcohol", "vote buying"],
+      "question": "What if someone offers me money or gifts for my vote?",
+      "answer": "This is ILLEGAL and you should REPORT it immediately!\n\n🚨 REPORTING:\n• Call cVIGIL app (ECI) — report within 100 minutes, get response\n• SMS: 1950\n• Call: 1800-111-950 (free)\n• District Collector office\n\n⚖️ PUNISHMENT FOR BRIBERS:\n• Section 171B of IPC: Up to 1 year in prison + fine for giving bribes\n• Candidate who bribes: Election can be declared void by court\n\n🔒 YOUR VOTE IS SECRET:\n• Even if you accept money (don't!), no one can verify how you voted\n• Your vote is completely anonymous\n\n💪 REMEMBER:\n• Your vote is worth more than any bribe\n• One vote = equal say in who governs 1.4 billion people\n• Report bribery anonymously on cVIGIL app — keep democracy clean"
+    }
+  ]
+}

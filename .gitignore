@@ -1,0 +1,21 @@
+# ── Secrets (NEVER commit these) ─────────────────────────────────────────────
+env-config.js
+.env
+.env.local
+.env.production
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Build output ──────────────────────────────────────────────────────────────
+dist/
+.firebase/
+
+# ── OS / Editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.log
+
+# ── Test coverage ─────────────────────────────────────────────────────────────
+coverage/

@@ -1,0 +1,37 @@
+{
+  "name": "electioniq",
+  "version": "1.0.0",
+  "description": "ElectionIQ — Interactive Election Process Assistant for India & the World",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --no-browser",
+    "start": "npx http-server . -p 3000 -c-1 --cors",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "lint": "npx eslint modules/ config/ app.js --ext .js"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "transform": {},
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "live-server": "^1.2.2"
+  },
+  "keywords": [
+    "election",
+    "india",
+    "democracy",
+    "pwa",
+    "ai"
+  ],
+  "author": "ElectionIQ Team",
+  "license": "MIT"
+}

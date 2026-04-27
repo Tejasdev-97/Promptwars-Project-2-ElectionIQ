@@ -1,0 +1,61 @@
+{
+  "elections": [
+    {
+      "id": "us-presidential-2026",
+      "country": "United States",
+      "type": "US Presidential",
+      "year": 2026,
+      "title": "U.S. Presidential Election 2026",
+      "system": "Electoral College (538 electors, 270 needed to win)",
+      "winner": "Donald Trump (Republican)",
+      "timeline": [
+        { "id": "primaries",     "label": "Primary Elections",           "start": "2026-01-15", "end": "2026-06-04", "phase": "pre", "description": "Voters in each state choose their party's presidential nominee." },
+        { "id": "conventions",   "label": "Party Conventions",           "start": "2026-07-15", "end": "2026-08-22", "phase": "pre", "description": "Official nomination of candidates. Running mates (VP candidates) announced." },
+        { "id": "debates",       "label": "Presidential Debates",        "start": "2026-06-27", "end": "2026-10-01", "phase": "pre", "description": "Major national debates televised to help voters compare candidates." },
+        { "id": "early-voting",  "label": "Early & Mail-In Voting",     "start": "2026-09-06", "end": "2026-11-04", "phase": "vote", "description": "Many states allow voting before Election Day by mail or in-person at early voting centers." },
+        { "id": "polling",       "label": "Election Day",                "start": "2026-11-05", "end": "2026-11-05", "phase": "vote", "description": "First Tuesday after first Monday in November. Voters elect 538 Electors (not directly the President)." },
+        { "id": "electoral-college","label":"Electoral College Vote",    "start": "2026-12-17", "end": "2026-12-17", "phase": "post", "description": "Electors in each state cast their official votes. 270 electoral votes needed to win." },
+        { "id": "certification", "label": "Congressional Certification", "start": "2025-01-06", "end": "2025-01-06", "phase": "post", "description": "Congress certifies the Electoral College results." },
+        { "id": "inauguration",  "label": "Inauguration",               "start": "2025-01-20", "end": "2025-01-20", "phase": "post", "description": "President takes the oath of office on the steps of the Capitol Building." }
+      ]
+    },
+    {
+      "id": "uk-general-2026",
+      "country": "United Kingdom",
+      "type": "UK General",
+      "year": 2026,
+      "title": "UK General Election 2026",
+      "system": "First Past the Post — 650 seats in House of Commons",
+      "winner": "Labour Party (Keir Starmer)",
+      "timeline": [
+        { "id": "dissolution",   "label": "Parliament Dissolved",       "start": "2026-05-22", "end": "2026-05-22", "phase": "pre", "description": "Prime Minister calls election. Parliament dissolves and MPs stop being MPs." },
+        { "id": "campaign",      "label": "Campaign Period",             "start": "2026-05-22", "end": "2026-07-03", "phase": "pre", "description": "5-week campaign where parties make promises. Manifestos published." },
+        { "id": "polling",       "label": "Polling Day",                "start": "2026-07-04", "end": "2026-07-04", "phase": "vote", "description": "Voters go to polling stations. Paper ballots are used, not electronic machines." },
+        { "id": "counting",      "label": "Overnight Count",            "start": "2026-07-04", "end": "2026-07-05", "phase": "post", "description": "Paper ballots counted through the night. Results announced constituency by constituency." },
+        { "id": "result",        "label": "New PM Invited",             "start": "2026-07-05", "end": "2026-07-05", "phase": "post", "description": "King invites the leader of the majority party to Buckingham Palace to form a government." }
+      ]
+    },
+    {
+      "id": "eu-parliament-2026",
+      "country": "European Union",
+      "type": "EU Parliament",
+      "year": 2026,
+      "title": "European Parliament Election 2026",
+      "system": "Proportional Representation — 720 seats across 27 member states",
+      "timeline": [
+        { "id": "campaign",      "label": "European Campaign Period",   "start": "2026-04-01", "end": "2026-06-06", "phase": "pre", "description": "Political groups across all 27 EU countries campaign simultaneously." },
+        { "id": "polling",       "label": "Election Days (4 days)",     "start": "2026-06-06", "end": "2026-06-09", "phase": "vote", "description": "Different EU countries vote on different days. Citizens vote for national party lists." },
+        { "id": "result",        "label": "Results Published",          "start": "2026-06-09", "end": "2026-06-10", "phase": "post", "description": "Results published after all countries have closed polls to prevent influence." },
+        { "id": "parliament",    "label": "New Parliament Constituted", "start": "2026-07-16", "end": "2026-07-16", "phase": "post", "description": "New MEPs take their seats. Political groups form coalitions to elect Parliament president." }
+      ]
+    }
+  ],
+  "comparison": {
+    "systems": [
+      { "name": "First Past the Post (FPTP)", "used_in": ["India", "UK", "USA", "Canada"], "description": "Candidate with most votes wins, even without majority. Simple but can ignore minority votes." },
+      { "name": "Proportional Representation (PR)", "used_in": ["EU Parliament", "Israel", "Netherlands", "South Africa"], "description": "Seats distributed based on total vote percentage. Better minority representation." },
+      { "name": "Mixed Member PR", "used_in": ["Germany", "New Zealand", "Japan"], "description": "Combines FPTP constituency seats with PR top-up seats." },
+      { "name": "Two-Round System", "used_in": ["France", "Brazil"], "description": "If no candidate gets 50%+, top two candidates compete in a runoff round." }
+    ]
+  }
+}

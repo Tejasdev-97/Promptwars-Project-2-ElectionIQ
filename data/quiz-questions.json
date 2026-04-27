@@ -1,0 +1,109 @@
+{
+  "questions": [
+    {
+      "id": "q1", "difficulty": "beginner", "topic": "indian-elections",
+      "question": "What is the minimum age to vote in India?",
+      "options": ["16 years", "18 years", "21 years", "25 years"],
+      "correct": 1,
+      "explanation": "The 61st Constitutional Amendment (1988) lowered the voting age from 21 to 18 years. Any Indian citizen aged 18 or above who is registered on the electoral roll can vote."
+    },
+    {
+      "id": "q2", "difficulty": "beginner", "topic": "indian-elections",
+      "question": "What does EVM stand for?",
+      "options": ["Electronic Voter Module", "Electronic Voting Machine", "Electrical Vote Marker", "Electoral Verification Machine"],
+      "correct": 1,
+      "explanation": "EVM stands for Electronic Voting Machine. It is a battery-operated device used in Indian elections since 1982. It eliminates the need for paper ballot boxes and reduces booth capturing and ballot stuffing."
+    },
+    {
+      "id": "q3", "difficulty": "beginner", "topic": "voter-rights",
+      "question": "Which document is the official Voter ID card in India?",
+      "options": ["Aadhaar Card", "PAN Card", "EPIC (Elector's Photo Identity Card)", "Passport"],
+      "correct": 2,
+      "explanation": "EPIC — Elector's Photo Identity Card — is the official voter ID issued by the Election Commission of India. However, you can also use Aadhaar, Passport, Driving Licence, and 8 other approved documents to cast your vote."
+    },
+    {
+      "id": "q4", "difficulty": "beginner", "topic": "indian-elections",
+      "question": "What is NOTA on the EVM?",
+      "options": ["None of the Approved", "None of the Above", "No One Takes Award", "National Option To Abstain"],
+      "correct": 1,
+      "explanation": "NOTA means 'None of the Above'. Introduced in 2013 after a Supreme Court order, it allows voters to reject all candidates on the ballot. It is the last option on the EVM, represented by a cross (✗) symbol."
+    },
+    {
+      "id": "q5", "difficulty": "beginner", "topic": "indian-elections",
+      "question": "How many Lok Sabha seats are there in India?",
+      "options": ["245", "543", "550", "790"],
+      "correct": 1,
+      "explanation": "There are 543 elected seats in the Lok Sabha (House of the People). The President can also nominate 2 Anglo-Indian members, making the total 545 (though this provision was removed in 2020)."
+    },
+    {
+      "id": "q6", "difficulty": "intermediate", "topic": "indian-elections",
+      "question": "What is the Model Code of Conduct (MCC)?",
+      "options": ["A law passed by Parliament to regulate elections", "Guidelines by ECI to ensure free & fair elections once elections are announced", "A code of ethics for journalists during elections", "Rules for counting votes accurately"],
+      "correct": 1,
+      "explanation": "MCC is a set of guidelines issued by the Election Commission of India that automatically comes into effect the moment elections are announced. It prevents the ruling party from using government resources or making new policy announcements to influence voters. It is not a law but is enforced by ECI."
+    },
+    {
+      "id": "q7", "difficulty": "intermediate", "topic": "evm-technology",
+      "question": "What is VVPAT used for?",
+      "options": ["To count votes faster", "To transmit results wirelessly", "To give voters proof of their vote and allow audit", "To store backup copies of votes in the cloud"],
+      "correct": 2,
+      "explanation": "VVPAT (Voter Verifiable Paper Audit Trail) is attached to the EVM. After you vote, it prints a paper slip showing your candidate's name, symbol and number for 7 seconds. The slip then drops into a sealed box. This allows verification and auditing of votes."
+    },
+    {
+      "id": "q8", "difficulty": "intermediate", "topic": "global-systems",
+      "question": "Which country uses the Electoral College to elect its President?",
+      "options": ["France", "United Kingdom", "United States", "Germany"],
+      "correct": 2,
+      "explanation": "The United States uses an Electoral College system. Voters technically elect 'Electors' (538 total) who formally vote for President. A candidate needs 270 electoral votes to win. This means winning the popular vote doesn't guarantee winning the presidency."
+    },
+    {
+      "id": "q9", "difficulty": "intermediate", "topic": "voter-rights",
+      "question": "What is a postal ballot?",
+      "options": ["Voting via internet", "Voting by submitting a ballot form by post", "A ballot that is invalid", "Emergency voting for senior citizens only"],
+      "correct": 1,
+      "explanation": "A postal ballot allows eligible voters to vote by post without visiting a polling booth. In India, it is available for: government servants on duty, defence personnel, senior citizens (80+), persons with disabilities, and voters under preventive detention."
+    },
+    {
+      "id": "q10", "difficulty": "intermediate", "topic": "indian-elections",
+      "question": "The Anti-Defection Law is contained in which schedule of the Indian Constitution?",
+      "options": ["Fifth Schedule", "Eighth Schedule", "Ninth Schedule", "Tenth Schedule"],
+      "correct": 3,
+      "explanation": "The Anti-Defection Law is in the Tenth Schedule, added by the 52nd Constitutional Amendment in 1985. It disqualifies an MP or MLA who votes against their party's direction or voluntarily gives up party membership. It was introduced to prevent 'aaya ram gaya ram' political switching."
+    },
+    {
+      "id": "q11", "difficulty": "beginner", "topic": "indian-elections",
+      "question": "Which constitutional body conducts general elections in India?",
+      "options": ["Supreme Court of India", "Election Commission of India", "Parliament of India", "National Election Authority"],
+      "correct": 1,
+      "explanation": "The Election Commission of India (ECI) is an autonomous constitutional authority established under Article 324 of the Constitution. It is responsible for administering elections to the Parliament, State Legislatures, and offices of the President and Vice-President."
+    },
+    {
+      "id": "q12", "difficulty": "beginner", "topic": "global-systems",
+      "question": "What electoral system does the United Kingdom use?",
+      "options": ["Proportional Representation", "Two-Round System", "First Past the Post", "Mixed Member Proportional"],
+      "correct": 2,
+      "explanation": "The UK uses the First Past the Post (FPTP) system — same as India. The candidate who gets the most votes in a constituency wins, even without an absolute majority. Critics say it can lead to 'wasted votes' and distorted seat tallies."
+    },
+    {
+      "id": "q13", "difficulty": "intermediate", "topic": "evm-technology",
+      "question": "Why can't EVMs be hacked via internet?",
+      "options": ["They use encrypted WiFi", "They are standalone machines with no network connectivity", "They use blockchain technology", "They are stored in Faraday cages"],
+      "correct": 1,
+      "explanation": "EVMs are standalone, battery-operated machines with absolutely no WiFi, Bluetooth, internet or any wireless connectivity. They cannot be remotely accessed or hacked. Each machine is programmed once before elections and never reprogrammed."
+    },
+    {
+      "id": "q14", "difficulty": "beginner", "topic": "voter-rights",
+      "question": "What is the minimum age to contest a Lok Sabha election in India?",
+      "options": ["18 years", "21 years", "25 years", "30 years"],
+      "correct": 2,
+      "explanation": "The minimum age to contest a Lok Sabha or State Assembly election in India is 25 years (Article 84 and 173 of the Constitution). For Rajya Sabha, the minimum age is 30 years."
+    },
+    {
+      "id": "q15", "difficulty": "intermediate", "topic": "indian-elections",
+      "question": "What happens if an election is contested in court and the winning candidate's election is set aside?",
+      "options": ["The second-place candidate automatically wins", "The election is cancelled permanently", "A by-election is held in that constituency", "ECI re-counts the votes"],
+      "correct": 2,
+      "explanation": "Under the Representation of the People Act 1951, if a court sets aside an election, a by-election (upchunav) is held in that constituency. The runner-up does NOT automatically become the winner — a fresh election must be held."
+    }
+  ]
+}

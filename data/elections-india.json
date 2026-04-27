@@ -1,0 +1,99 @@
+{
+  "country": "India",
+  "elections": [
+    {
+      "id": "lok-sabha-2026",
+      "type": "Lok Sabha",
+      "year": 2026,
+      "title": "18th Lok Sabha General Election",
+      "phases": 7,
+      "phases_detail": [
+        { "phase": 1, "date": "2026-04-19", "states": ["Andaman & Nicobar Islands","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","J&K","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Rajasthan","Sikkim","Tamil Nadu","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"] },
+        { "phase": 2, "date": "2026-04-26", "states": ["Assam","Bihar","Chhattisgarh","J&K","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Rajasthan","Tripura","Uttar Pradesh","West Bengal"] },
+        { "phase": 3, "date": "2026-05-07", "states": ["Assam","Bihar","Chhattisgarh","Goa","Gujarat","J&K","Karnataka","Madhya Pradesh","Maharashtra","Uttar Pradesh","West Bengal","Dadra & Nagar Haveli"] },
+        { "phase": 4, "date": "2026-05-13", "states": ["Andhra Pradesh","Bihar","J&K","Jharkhand","Madhya Pradesh","Maharashtra","Odisha","Telangana","Uttar Pradesh","West Bengal"] },
+        { "phase": 5, "date": "2026-05-20", "states": ["Bihar","J&K","Jharkhand","Ladakh","Maharashtra","Odisha","Uttar Pradesh","West Bengal"] },
+        { "phase": 6, "date": "2026-05-25", "states": ["Bihar","Haryana","J&K","Jharkhand","Odisha","Uttar Pradesh","West Bengal","Delhi"] },
+        { "phase": 7, "date": "2026-06-01", "states": ["Bihar","Himachal Pradesh","J&K","Odisha","Punjab","Uttar Pradesh","West Bengal","Chandigarh"] }
+      ],
+      "counting_date": "2026-06-04",
+      "result_date": "2026-06-04",
+      "winner_party": "National Democratic Alliance",
+      "timeline": [
+        { "id": "announcement",  "label": "Election Announcement",      "start": "2026-03-16", "end": "2026-03-16", "phase": "pre", "description": "Election Commission of India announces the schedule for 18th Lok Sabha elections." },
+        { "id": "mcc",           "label": "Model Code of Conduct",       "start": "2026-03-16", "end": "2026-06-04", "phase": "pre", "description": "MCC restricts government from announcing new schemes, using official resources for campaigning. Ensures level playing field." },
+        { "id": "voter-freeze",  "label": "Final Voter List Published",  "start": "2026-03-27", "end": "2026-03-27", "phase": "pre", "description": "The final electoral roll is published. No new names can be added after this date." },
+        { "id": "nomination",    "label": "Nomination Filing (Phase 1)", "start": "2026-03-20", "end": "2026-03-27", "phase": "pre", "description": "Candidates file nomination papers with the Returning Officer along with a security deposit of ₹25,000 (₹12,500 for SC/ST)." },
+        { "id": "scrutiny",      "label": "Scrutiny of Nominations",    "start": "2026-03-28", "end": "2026-03-28", "phase": "pre", "description": "Returning Officer checks if nomination papers are valid and candidates meet eligibility criteria." },
+        { "id": "campaign",      "label": "Campaign Period",             "start": "2026-03-29", "end": "2026-04-17", "phase": "pre", "description": "Candidates and parties hold rallies, distribute manifestos, run ads. Must follow ECI expenditure limits." },
+        { "id": "polling",       "label": "Polling (7 Phases)",          "start": "2026-04-19", "end": "2026-06-01", "phase": "vote", "description": "Voting happens across 7 phases. Voters press button on EVM. VVPAT prints a slip for verification." },
+        { "id": "counting",      "label": "Vote Counting",               "start": "2026-06-04", "end": "2026-06-04", "phase": "post", "description": "Votes are counted under the supervision of Returning Officers and observers. Results declared constituency-wise." },
+        { "id": "result",        "label": "Results Declared",            "start": "2026-06-04", "end": "2026-06-04", "phase": "post", "description": "Winners receive Certificate of Election. President invites the majority party/coalition to form the government." },
+        { "id": "oath",          "label": "Oath Ceremony",               "start": "2026-06-09", "end": "2026-06-09", "phase": "post", "description": "Prime Minister and Council of Ministers take oath administered by the President at Rashtrapati Bhavan." }
+      ]
+    },
+    {
+      "id": "lok-sabha-2019",
+      "type": "Lok Sabha",
+      "year": 2019,
+      "title": "17th Lok Sabha General Election",
+      "phases": 7,
+      "counting_date": "2019-05-23",
+      "result_date": "2019-05-23",
+      "winner_party": "National Democratic Alliance",
+      "timeline": [
+        { "id": "announcement",  "label": "Election Announcement",      "start": "2019-03-10", "end": "2019-03-10", "phase": "pre" },
+        { "id": "mcc",           "label": "Model Code of Conduct",       "start": "2019-03-10", "end": "2019-05-23", "phase": "pre" },
+        { "id": "polling",       "label": "Polling (7 Phases)",          "start": "2019-04-11", "end": "2019-05-19", "phase": "vote" },
+        { "id": "counting",      "label": "Vote Counting",               "start": "2019-05-23", "end": "2019-05-23", "phase": "post" },
+        { "id": "oath",          "label": "Oath Ceremony",               "start": "2019-05-30", "end": "2019-05-30", "phase": "post" }
+      ]
+    },
+    {
+      "id": "vidhan-sabha-maharashtra-2026",
+      "type": "Vidhan Sabha",
+      "state": "Maharashtra",
+      "year": 2026,
+      "title": "Maharashtra Legislative Assembly Election 2026",
+      "phases": 1,
+      "counting_date": "2026-11-23",
+      "result_date": "2026-11-23",
+      "winner_party": "Mahayuti Alliance",
+      "timeline": [
+        { "id": "announcement",  "label": "Election Announcement",      "start": "2026-10-15", "end": "2026-10-15", "phase": "pre", "description": "ECI announces Maharashtra assembly election schedule." },
+        { "id": "mcc",           "label": "Model Code of Conduct",       "start": "2026-10-15", "end": "2026-11-23", "phase": "pre", "description": "MCC comes into immediate effect." },
+        { "id": "nomination",    "label": "Nomination Filing",          "start": "2026-10-22", "end": "2026-10-29", "phase": "pre", "description": "Candidates file nominations at district level." },
+        { "id": "campaign",      "label": "Campaign Period",             "start": "2026-10-30", "end": "2026-11-18", "phase": "pre", "description": "Active campaigning. No campaigning allowed 48 hours before polling (silent period)." },
+        { "id": "polling",       "label": "Polling Day",                "start": "2026-11-20", "end": "2026-11-20", "phase": "vote", "description": "Single phase voting across all 288 assembly constituencies." },
+        { "id": "counting",      "label": "Vote Counting",               "start": "2026-11-23", "end": "2026-11-23", "phase": "post" },
+        { "id": "result",        "label": "Results Declared",            "start": "2026-11-23", "end": "2026-11-23", "phase": "post" },
+        { "id": "oath",          "label": "Oath Ceremony",               "start": "2026-12-05", "end": "2026-12-05", "phase": "post" }
+      ]
+    },
+    {
+      "id": "panchayat-general",
+      "type": "Panchayat",
+      "year": 2026,
+      "title": "Gram Panchayat Election (Generic Process)",
+      "phases": 1,
+      "timeline": [
+        { "id": "announcement",  "label": "SEC Notification",           "start": "2026-01-01", "end": "2026-01-01", "phase": "pre", "description": "State Election Commission (SEC) — not ECI — conducts panchayat elections." },
+        { "id": "voter-list",    "label": "Voter List Preparation",     "start": "2026-01-05", "end": "2026-01-20", "phase": "pre", "description": "Ward-wise voter lists prepared by local authorities." },
+        { "id": "nomination",    "label": "Nomination & Withdrawal",    "start": "2026-01-22", "end": "2026-01-28", "phase": "pre", "description": "Candidates from the village itself file nominations. No party symbols in most states." },
+        { "id": "campaign",      "label": "Campaign",                   "start": "2026-01-29", "end": "2026-02-10", "phase": "pre" },
+        { "id": "polling",       "label": "Polling Day",                "start": "2026-02-14", "end": "2026-02-14", "phase": "vote", "description": "Ballot papers often used instead of EVMs in some states for panchayat elections." },
+        { "id": "counting",      "label": "Counting & Result",          "start": "2026-02-15", "end": "2026-02-15", "phase": "post" }
+      ]
+    }
+  ],
+  "key_bodies": {
+    "ECI": { "name": "Election Commission of India", "website": "https://eci.gov.in", "role": "Constitutional body that conducts Lok Sabha, Rajya Sabha and State Assembly elections." },
+    "SEC": { "name": "State Election Commission", "role": "Conducts Panchayati Raj and Urban Local Body elections." }
+  },
+  "voter_requirements": {
+    "minimum_age": 18,
+    "citizenship": "Indian citizen",
+    "documents": ["Voter ID (EPIC)", "Aadhaar Card", "Passport", "Driving Licence", "MNREGA Job Card"],
+    "registration_url": "https://voters.eci.gov.in"
+  }
+}
