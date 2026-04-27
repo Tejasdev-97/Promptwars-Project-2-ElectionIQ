@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ElectionIQ 🇮🇳 : Smart Voter Intelligence Platform
 
 ![ElectionIQ Banner](https://img.shields.io/badge/Platform-Progressive%20Web%20App%20(PWA)-1a73e8?style=for-the-badge) ![Gemini AI](https://img.shields.io/badge/Powered_by-Gemini_2.5_Flash-f97316?style=for-the-badge) ![Offline Ready](https://img.shields.io/badge/Status-Offline_Ready-success?style=for-the-badge)
@@ -100,3 +101,6 @@ You need **Node.js** installed on your machine to run the local development serv
 
 ---
 *Built for the 2026 Indian Elections.* 🇮🇳
+=======
+# Promptwars-Project-2-ElectionIQ
+>>>>>>> 12cce2021c84d3ad3858ac7fca05261a65150832
