@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.googleapis.com https://*.gstatic.com https://*.openstreetmap.org; connect-src 'self' https://generativelanguage.googleapis.com https://*.googleapis.com https://nominatim.openstreetmap.org; frame-src 'self' https://*.google.com https://www.openstreetmap.org https://*.openstreetmap.org;">
-  <meta name="description" content="ElectionIQ — Understand India's election process, timelines, and steps interactively. Multilingual, offline-ready, and accessible." />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.googleapis.com https://*.gstatic.com https://*.openstreetmap.org; connect-src 'self' https://generativelanguage.googleapis.com https://*.googleapis.com https://nominatim.openstreetmap.org; frame-src 'self' https://*.google.com https://www.youtube.com https://*.youtube.com https://www.openstreetmap.org https://*.openstreetmap.org;">
+  <meta name="description"
+    content="ElectionIQ — Understand India's election process, timelines, and steps interactively. Multilingual, offline-ready, and accessible." />
   <meta name="theme-color" content="#FF6B35" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="ElectionIQ" />
   <meta property="og:title" content="ElectionIQ — Election Process Assistant" />
-  <meta property="og:description" content="Interactive, multilingual, offline-ready election guide for India & the World." />
+  <meta property="og:description"
+    content="Interactive, multilingual, offline-ready election guide for India & the World." />
   <meta property="og:type" content="website" />
   <title>ElectionIQ — Election Process Assistant</title>
   <link rel="manifest" href="manifest.json" />
@@ -18,10 +22,13 @@
   <link rel="icon" type="image/png" href="assets/icon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="env-config.js" onerror="console.warn('env-config.js missing — running in demo mode.')"></script>
 </head>
+
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- HEADER -->
@@ -32,16 +39,16 @@
         <span class="logo-text">Election<strong>IQ</strong></span>
       </a>
       <nav class="desktop-nav" role="navigation" aria-label="Main navigation">
-        <a href="#home"     class="nav-link active" id="nav-home"     data-section="home">Home</a>
-        <a href="#timeline" class="nav-link"        id="nav-timeline" data-section="timeline">Timeline</a>
-        <a href="#guide"    class="nav-link"        id="nav-guide"    data-section="guide">How to Vote</a>
-        <a href="#quiz"     class="nav-link"        id="nav-quiz"     data-section="quiz">Quiz</a>
-        <a href="#glossary" class="nav-link"        id="nav-glossary" data-section="glossary">Glossary</a>
-        <a href="#ai-chat"  class="nav-link"        id="nav-ai"       data-section="ai-chat">Ask AI</a>
-        <a href="#compare"  class="nav-link"        id="nav-compare"  data-section="compare">Compare</a>
-        <a href="#booth"    class="nav-link"        id="nav-booth"    data-section="booth">Booth & Candidate</a>
-        <a href="#eligibility" class="nav-link"     id="nav-eligibility" data-section="eligibility">Eligibility</a>
-        <a href="#results"  class="nav-link"        id="nav-results"  data-section="results">Live Results</a>
+        <a href="#home" class="nav-link active" id="nav-home" data-section="home">Home</a>
+        <a href="#timeline" class="nav-link" id="nav-timeline" data-section="timeline">Timeline</a>
+        <a href="#guide" class="nav-link" id="nav-guide" data-section="guide">How to Vote</a>
+        <a href="#quiz" class="nav-link" id="nav-quiz" data-section="quiz">Quiz</a>
+        <a href="#glossary" class="nav-link" id="nav-glossary" data-section="glossary">Glossary</a>
+        <a href="#ai-chat" class="nav-link" id="nav-ai" data-section="ai-chat">Ask AI</a>
+        <a href="#compare" class="nav-link" id="nav-compare" data-section="compare">Compare</a>
+        <a href="#booth" class="nav-link" id="nav-booth" data-section="booth">Booth & Candidate</a>
+        <a href="#eligibility" class="nav-link" id="nav-eligibility" data-section="eligibility">Eligibility</a>
+        <a href="#results" class="nav-link" id="nav-results" data-section="results">Live Results</a>
       </nav>
       <div class="header-actions">
         <div class="lang-dropdown" role="combobox" aria-label="Language selector">
@@ -80,58 +87,72 @@
       <div class="hero">
         <div class="hero-badge animate-fade-in"><span>🗳️ India Elections 2026</span></div>
         <h1 class="hero-title animate-slide-up" id="hero-title" data-translate="true">
-          Understand Every<br/><span class="text-gradient">Election</span>, Step by Step
+          Understand Every<br /><span class="text-gradient">Election</span>, Step by Step
         </h1>
         <p class="hero-subtitle animate-slide-up delay-1" id="hero-subtitle" data-translate="true">
-          Your AI-powered guide to India's democratic process — timelines, how to vote, quiz challenges, and real-time answers. Available in 6 languages, offline-ready.
+          Your AI-powered guide to India's democratic process — timelines, how to vote, quiz challenges, and real-time
+          answers. Available in 6 languages, offline-ready.
         </p>
         <div class="hero-actions animate-slide-up delay-2">
-          <button class="btn btn-primary" id="cta-timeline" data-navigate="timeline"><span aria-hidden="true">📅</span> Explore Timeline</button>
-          <button class="btn btn-secondary" id="cta-guide" data-navigate="guide"><span aria-hidden="true">📋</span> How to Vote</button>
-          <button class="btn btn-ghost" id="cta-quiz" data-navigate="quiz"><span aria-hidden="true">🎯</span> Take Quiz</button>
+          <button class="btn btn-primary" id="cta-timeline" data-navigate="timeline"><span aria-hidden="true">📅</span>
+            Explore Timeline</button>
+          <button class="btn btn-secondary" id="cta-guide" data-navigate="guide"><span aria-hidden="true">📋</span> How
+            to Vote</button>
+          <button class="btn btn-ghost" id="cta-quiz" data-navigate="quiz"><span aria-hidden="true">🎯</span> Take
+            Quiz</button>
         </div>
         <div class="stats-bar animate-fade-in delay-3" role="list" aria-label="Key statistics">
-          <div class="stat-item" role="listitem"><span class="stat-number" data-count="969">0</span><span class="stat-unit">M+</span><span class="stat-label">Registered Voters</span></div>
-          <div class="stat-item" role="listitem"><span class="stat-number" data-count="543">0</span><span class="stat-label">Lok Sabha Seats</span></div>
-          <div class="stat-item" role="listitem"><span class="stat-number" data-count="4">0</span><span class="stat-label">State Polls in 2026</span></div>
-          <div class="stat-item" role="listitem"><span class="stat-number" data-count="6">0</span><span class="stat-label">Languages</span></div>
+          <div class="stat-item" role="listitem"><span class="stat-number" data-count="969">0</span><span
+              class="stat-unit">M+</span><span class="stat-label">Registered Voters</span></div>
+          <div class="stat-item" role="listitem"><span class="stat-number" data-count="543">0</span><span
+              class="stat-label">Lok Sabha Seats</span></div>
+          <div class="stat-item" role="listitem"><span class="stat-number" data-count="4">0</span><span
+              class="stat-label">State Polls in 2026</span></div>
+          <div class="stat-item" role="listitem"><span class="stat-number" data-count="6">0</span><span
+              class="stat-label">Languages</span></div>
         </div>
       </div>
       <div class="feature-grid" role="list" aria-label="Features">
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="timeline">
           <div class="fc-icon" aria-hidden="true">📅</div>
           <h2 class="fc-title" data-translate="true">Election Timeline</h2>
-          <p class="fc-desc" data-translate="true">Interactive timeline of all election phases, dates, and key events from announcement to results.</p>
+          <p class="fc-desc" data-translate="true">Interactive timeline of all election phases, dates, and key events
+            from announcement to results.</p>
           <span class="fc-arrow" aria-hidden="true">→</span>
         </article>
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="guide">
           <div class="fc-icon" aria-hidden="true">📋</div>
           <h2 class="fc-title" data-translate="true">How to Vote</h2>
-          <p class="fc-desc" data-translate="true">Step-by-step guide to voter registration, finding your polling booth, and casting your vote.</p>
+          <p class="fc-desc" data-translate="true">Step-by-step guide to voter registration, finding your polling booth,
+            and casting your vote.</p>
           <span class="fc-arrow" aria-hidden="true">→</span>
         </article>
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="quiz">
           <div class="fc-icon" aria-hidden="true">🎯</div>
           <h2 class="fc-title" data-translate="true">Election Quiz</h2>
-          <p class="fc-desc" data-translate="true">Test your knowledge with beginner to expert questions about Indian democracy and elections.</p>
+          <p class="fc-desc" data-translate="true">Test your knowledge with beginner to expert questions about Indian
+            democracy and elections.</p>
           <span class="fc-arrow" aria-hidden="true">→</span>
         </article>
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="glossary">
           <div class="fc-icon" aria-hidden="true">📖</div>
           <h2 class="fc-title" data-translate="true">Glossary</h2>
-          <p class="fc-desc" data-translate="true">Understand election jargon — EVM, NOTA, Model Code, constituency — explained simply.</p>
+          <p class="fc-desc" data-translate="true">Understand election jargon — EVM, NOTA, Model Code, constituency —
+            explained simply.</p>
           <span class="fc-arrow" aria-hidden="true">→</span>
         </article>
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="ai-chat">
           <div class="fc-icon" aria-hidden="true">🤖</div>
           <h2 class="fc-title" data-translate="true">Ask AI</h2>
-          <p class="fc-desc" data-translate="true">Ask anything about elections in your language — powered by Gemini AI with offline fallback.</p>
+          <p class="fc-desc" data-translate="true">Ask anything about elections in your language — powered by Gemini AI
+            with offline fallback.</p>
           <span class="fc-arrow" aria-hidden="true">→</span>
         </article>
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="compare">
           <div class="fc-icon" aria-hidden="true">🌐</div>
           <h2 class="fc-title" data-translate="true">Global Compare</h2>
-          <p class="fc-desc" data-translate="true">See how India's election system compares with USA, UK, and EU side by side.</p>
+          <p class="fc-desc" data-translate="true">See how India's election system compares with USA, UK, and EU side by
+            side.</p>
           <span class="fc-arrow" aria-hidden="true">→</span>
         </article>
         <article class="feature-card animate-card" role="listitem" tabindex="0" data-navigate="booth">
@@ -160,7 +181,8 @@
           <span class="legend-item legend-upcoming" role="listitem">Upcoming</span>
         </div>
       </div>
-      <div id="timeline-container" class="timeline-container" role="list" aria-label="Election phases" aria-live="polite">
+      <div id="timeline-container" class="timeline-container" role="list" aria-label="Election phases"
+        aria-live="polite">
         <div class="loading-spinner" aria-label="Loading..."><span aria-hidden="true">⏳</span></div>
       </div>
     </section>
@@ -178,44 +200,70 @@
         <h2 id="voter-check-heading">Check Your Voter Registration</h2>
         <p>Quickly find out if you're registered and locate your polling booth.</p>
         <div class="voter-check-actions">
-          <a href="https://electoralsearch.eci.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="eci-search-link"><span aria-hidden="true">🔍</span> Search on ECI</a>
-          <a href="https://www.nvsp.in" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="nvsp-link"><span aria-hidden="true">📝</span> Register to Vote</a>
+          <a href="https://electoralsearch.eci.gov.in" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+            id="eci-search-link"><span aria-hidden="true">🔍</span> Search on ECI</a>
+          <a href="https://www.nvsp.in" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+            id="nvsp-link"><span aria-hidden="true">📝</span> Register to Vote</a>
         </div>
       </div>
-      
+
       <!-- Special Guide: Rural & First-Time Voters -->
-      <div class="comparison-details-card animate-fade-in" style="margin-top: 20px; background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light);">
+      <div class="comparison-details-card animate-fade-in"
+        style="margin-top: 20px; background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light);">
         <h2 data-translate="true">Special Guide: Rural & First-Time Voters</h2>
-        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-secondary);" data-translate="true">Voting in village Panchayat or Municipal elections? Voting for the very first time? Here is what you need to know:</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-          
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--brand-primary);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">1. Gram Panchayat (Rural Elections)</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Unlike big elections (EVMs), village Panchayat elections often still use <strong>Paper Ballots</strong>. You will get a ballot paper and a rubber stamp. Stamp clearly over your candidate's symbol, fold the paper securely, and drop it in the ballot box.</p>
+        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-secondary);" data-translate="true">Voting in
+          village Panchayat or Municipal elections? Voting for the very first time? Here is what you need to know:</p>
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--brand-primary);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">1. Gram Panchayat (Rural
+              Elections)</h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Unlike
+              big elections (EVMs), village Panchayat elections often still use <strong>Paper Ballots</strong>. You will
+              get a ballot paper and a rubber stamp. Stamp clearly over your candidate's symbol, fold the paper
+              securely, and drop it in the ballot box.</p>
           </div>
 
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-success);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">2. First-Time Voters (18+)</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">You can apply for your Voter ID by filling <strong>Form 6</strong> via the Voter Helpline App. Even if your physical card hasn't arrived by election day, if your name is on the list, you can vote using your Aadhaar card or PAN card.</p>
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-success);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">2. First-Time Voters (18+)
+            </h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">You can
+              apply for your Voter ID by filling <strong>Form 6</strong> via the Voter Helpline App. Even if your
+              physical card hasn't arrived by election day, if your name is on the list, you can vote using your Aadhaar
+              card or PAN card.</p>
           </div>
 
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-warning);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">3. Assistance at the Booth</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">If you cannot read the ballot or are physically challenged, don't worry. The Presiding Officer is trained to assist you. You are also allowed to bring a companion (18+) to help you press the button or stamp the paper.</p>
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-warning);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">3. Assistance at the Booth
+            </h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">If you
+              cannot read the ballot or are physically challenged, don't worry. The Presiding Officer is trained to
+              assist you. You are also allowed to bring a companion (18+) to help you press the button or stamp the
+              paper.</p>
           </div>
 
         </div>
       </div>
-      <div class="video-guides-card" style="margin-top: 20px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <div class="video-guides-card"
+        style="margin-top: 20px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0;">
         <h2>🎥 Video Guides (For Easy Understanding)</h2>
-        <p>Watch these simple videos in your regional language explaining how to vote. Perfect if you prefer watching over reading.</p>
+        <p>Watch these simple videos in your regional language explaining how to vote. Perfect if you prefer watching
+          over reading.</p>
         <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
-          <a href="https://www.youtube.com/watch?v=placeholder1" target="_blank" class="btn btn-outline">▶️ How to use EVM (Hindi)</a>
-          <a href="https://www.youtube.com/watch?v=placeholder2" target="_blank" class="btn btn-outline">▶️ Voting Process (Marathi)</a>
-          <a href="https://www.youtube.com/watch?v=placeholder3" target="_blank" class="btn btn-outline">▶️ Documents Required (Tamil)</a>
+          <a href="https://youtu.be/BtsyBetcCCs?si=letiSK45hNyIsEau" target="_blank" class="btn btn-outline">▶️ How to
+            use EVM (Hindi)</a>
+          <a href="https://youtu.be/XGJQNKFYqYI?si=9d0y7vUdAmTbq3mh" target="_blank" class="btn btn-outline">▶️ Voting
+            Process</a>
+          <a href="https://youtu.be/xK0AecDYpIM?si=f1wOo8HEwNa0vejZ" target="_blank" class="btn btn-outline">▶️
+            Documents Required</a>
         </div>
         <div style="margin-top: 15px; padding: 10px; background: #f0f7ff; border-left: 4px solid #1a73e8;">
-          <strong>🔊 Audio Feature:</strong> Tap the microphone icon in the bottom corner of the AI Chat to ask questions using your voice! The AI will speak the answers back to you.
+          <strong>🔊 Audio Feature:</strong> Tap the microphone icon in the bottom corner of the AI Chat to ask
+          questions using your voice! The AI will speak the answers back to you.
         </div>
       </div>
 
@@ -234,14 +282,20 @@
       <div id="quiz-lobby" class="quiz-lobby">
         <div class="difficulty-selector" role="group" aria-labelledby="difficulty-label">
           <span id="difficulty-label" class="form-label" data-translate="true">Choose Difficulty</span>
-          <button class="diff-btn active" id="diff-beginner"     data-difficulty="beginner" data-translate="true">🌱 Beginner</button>
-          <button class="diff-btn"       id="diff-intermediate" data-difficulty="intermediate" data-translate="true">⚡ Intermediate</button>
-          <button class="diff-btn"       id="diff-expert"       data-difficulty="expert" data-translate="true">🔥 Expert</button>
+          <button class="diff-btn active" id="diff-beginner" data-difficulty="beginner" data-translate="true">🌱
+            Beginner</button>
+          <button class="diff-btn" id="diff-intermediate" data-difficulty="intermediate" data-translate="true">⚡
+            Intermediate</button>
+          <button class="diff-btn" id="diff-expert" data-difficulty="expert" data-translate="true">🔥 Expert</button>
         </div>
-        <button class="btn btn-primary btn-large" id="start-quiz-btn" data-translate="true"><span aria-hidden="true">🎯</span> Start Quiz</button>
+        <button class="btn btn-primary btn-large" id="start-quiz-btn" data-translate="true"><span
+            aria-hidden="true">🎯</span> Start Quiz</button>
       </div>
       <div id="quiz-play" class="quiz-play" hidden aria-live="polite">
-        <div class="quiz-progress"><div class="quiz-progress-bar" id="quiz-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quiz-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
         <div class="quiz-meta">
           <span id="quiz-question-counter">Question 1 of 5</span>
           <span id="quiz-score-display">Score: 0</span>
@@ -262,18 +316,22 @@
           <button class="btn btn-secondary" id="share-quiz-btn">📤 Share Score</button>
         </div>
       </div>
-      <div class="quiz-achievements animate-fade-in" style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-        <div class="achievement-card" style="background: var(--bg-card); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+      <div class="quiz-achievements animate-fade-in"
+        style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+        <div class="achievement-card"
+          style="background: var(--bg-card); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
           <div style="font-size: 2rem;">🌟</div>
           <h4 data-translate="true">Best Streak</h4>
           <p id="quiz-streak" style="font-size: 1.2rem; font-weight: 700; color: var(--brand-primary);">0</p>
         </div>
-        <div class="achievement-card" style="background: var(--bg-card); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+        <div class="achievement-card"
+          style="background: var(--bg-card); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
           <div style="font-size: 2rem;">🎖️</div>
           <h4 data-translate="true">Rank</h4>
           <p id="quiz-rank" style="font-size: 1.1rem; font-weight: 600;" data-translate="true">Beginner Voter</p>
         </div>
-        <div class="achievement-card" style="background: var(--bg-card); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+        <div class="achievement-card"
+          style="background: var(--bg-card); padding: 15px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
           <div style="font-size: 2rem;">📅</div>
           <h4 data-translate="true">Last Played</h4>
           <p id="quiz-last-played" style="font-size: 0.9rem; color: var(--text-muted);" data-translate="true">Never</p>
@@ -289,7 +347,8 @@
       </div>
       <div class="glossary-search-bar">
         <label for="glossary-search" class="sr-only">Search glossary</label>
-        <input type="search" id="glossary-search" class="form-input" placeholder="Search terms (e.g. EVM, NOTA)..." aria-label="Search glossary" autocomplete="off" />
+        <input type="search" id="glossary-search" class="form-input" placeholder="Search terms (e.g. EVM, NOTA)..."
+          aria-label="Search glossary" autocomplete="off" />
         <span class="search-icon" aria-hidden="true">🔍</span>
       </div>
       <div id="glossary-container" class="glossary-grid" role="list" aria-label="Glossary terms" aria-live="polite">
@@ -304,16 +363,18 @@
         <p class="section-subtitle" data-translate="true">Ask anything about elections — powered by Gemini</p>
       </div>
       <div class="chat-wrapper" role="region" aria-label="AI Chat">
-        <div class="chat-messages" id="chat-messages" role="log" aria-label="Conversation" aria-live="polite" tabindex="0">
+        <div class="chat-messages" id="chat-messages" role="log" aria-label="Conversation" aria-live="polite"
+          tabindex="0">
           <div class="chat-msg ai animate-fade-in" id="chat-welcome-msg">
             <div class="msg-avatar" aria-hidden="true">🤖</div>
             <div class="msg-bubble">
-              <p>Namaste! I'm <strong>ElectionIQ AI</strong> 🗳️<br/>Ask me anything about Indian elections!</p>
+              <p>Namaste! I'm <strong>ElectionIQ AI</strong> 🗳️<br />Ask me anything about Indian elections!</p>
               <div class="quick-chips" role="list" aria-label="Quick suggestions">
                 <button class="chip" data-query="How do I vote in India?" role="listitem">How do I vote?</button>
                 <button class="chip" data-query="What is NOTA?" role="listitem">What is NOTA?</button>
                 <button class="chip" data-query="When is the next election?" role="listitem">Next election?</button>
-                <button class="chip" data-query="What documents do I need to vote?" role="listitem">Documents needed?</button>
+                <button class="chip" data-query="What documents do I need to vote?" role="listitem">Documents
+                  needed?</button>
               </div>
             </div>
           </div>
@@ -325,10 +386,12 @@
         <form class="chat-input-bar" id="chat-form" role="form" aria-label="Ask a question">
           <button type="button" class="icon-btn voice-btn" id="voice-btn" aria-label="Voice input">🎤</button>
           <label for="chat-input" class="sr-only">Your question</label>
-          <textarea id="chat-input" class="chat-textarea" rows="1" placeholder="Ask about elections..." aria-label="Type your question" maxlength="500" autocomplete="off"></textarea>
+          <textarea id="chat-input" class="chat-textarea" rows="1" placeholder="Ask about elections..."
+            aria-label="Type your question" maxlength="500" autocomplete="off"></textarea>
           <button type="submit" class="icon-btn send-btn" id="chat-send-btn" aria-label="Send message">➤</button>
         </form>
-        <p class="chat-disclaimer">AI may make mistakes. Verify with <a href="https://eci.gov.in" target="_blank" rel="noopener">ECI.gov.in</a>.</p>
+        <p class="chat-disclaimer">AI may make mistakes. Verify with <a href="https://eci.gov.in" target="_blank"
+            rel="noopener">ECI.gov.in</a>.</p>
       </div>
     </section>
 
@@ -359,8 +422,9 @@
       <div id="compare-container" class="compare-grid" aria-live="polite">
         <p class="compare-placeholder" data-translate="true">Select two countries and click Compare.</p>
       </div>
-      
-      <div class="comparison-details-card animate-fade-in" style="margin-top: 30px; background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light);">
+
+      <div class="comparison-details-card animate-fade-in"
+        style="margin-top: 30px; background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light);">
         <h2 data-translate="true">Key Differences at a Glance</h2>
         <div style="overflow-x: auto; margin-top: 15px;">
           <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
@@ -397,29 +461,49 @@
       </div>
 
       <!-- Types of Elections in India Card -->
-      <div class="comparison-details-card animate-fade-in" style="margin-top: 20px; background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light);">
+      <div class="comparison-details-card animate-fade-in"
+        style="margin-top: 20px; background: var(--bg-card); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light);">
         <h2 data-translate="true">Types of Elections in India</h2>
-        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-secondary);" data-translate="true">India's democratic framework consists of several tiers of elections to ensure representation at all levels of government:</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-          
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--brand-primary);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">Lok Sabha (General Elections)</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Direct elections held every 5 years to elect Members of Parliament (MPs) to the lower house. The Prime Minister is selected from the majority party/coalition.</p>
+        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-secondary);" data-translate="true">India's
+          democratic framework consists of several tiers of elections to ensure representation at all levels of
+          government:</p>
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--brand-primary);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">Lok Sabha (General
+              Elections)</h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Direct
+              elections held every 5 years to elect Members of Parliament (MPs) to the lower house. The Prime Minister
+              is selected from the majority party/coalition.</p>
           </div>
 
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--brand-secondary);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">Rajya Sabha (Upper House)</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Indirect elections where Members of Legislative Assemblies (MLAs) elect MPs to the Council of States. Members serve 6-year terms, with one-third retiring every 2 years.</p>
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--brand-secondary);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">Rajya Sabha (Upper House)
+            </h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Indirect
+              elections where Members of Legislative Assemblies (MLAs) elect MPs to the Council of States. Members serve
+              6-year terms, with one-third retiring every 2 years.</p>
           </div>
 
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-success);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">State Legislative Assemblies (Vidhan Sabha)</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Direct elections held every 5 years within individual states to elect MLAs. The Chief Minister is formed by the majority party.</p>
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-success);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">State Legislative
+              Assemblies (Vidhan Sabha)</h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Direct
+              elections held every 5 years within individual states to elect MLAs. The Chief Minister is formed by the
+              majority party.</p>
           </div>
 
-          <div style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-warning);">
-            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">Local Bodies (Panchayats & Municipalities)</h3>
-            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Direct grassroots elections held every 5 years to elect Sarpanches, Mayors, and Ward Councillors to govern villages and cities.</p>
+          <div
+            style="background: var(--bg-secondary); padding: 15px; border-radius: 8px; border-left: 4px solid var(--color-warning);">
+            <h3 style="font-size: 1.1rem; color: var(--text-primary);" data-translate="true">Local Bodies (Panchayats &
+              Municipalities)</h3>
+            <p style="font-size: 0.85rem; margin-top: 8px; color: var(--text-secondary);" data-translate="true">Direct
+              grassroots elections held every 5 years to elect Sarpanches, Mayors, and Ward Councillors to govern
+              villages and cities.</p>
           </div>
 
         </div>
@@ -438,7 +522,8 @@
         <button class="btn btn-secondary" id="btn-use-location">📍 Use My Location</button>
       </div>
       <div id="booth-results" class="booth-results"></div>
-      <div id="map-container" class="map-container" style="height: 400px; width: 100%; margin-top: 20px; background: #eaeaea; border-radius: 8px;"></div>
+      <div id="map-container" class="map-container"
+        style="height: 400px; width: 100%; margin-top: 20px; background: #eaeaea; border-radius: 8px;"></div>
     </section>
 
     <!-- ELIGIBILITY CHECKER -->
@@ -462,8 +547,9 @@
         <button type="submit" class="btn btn-primary">Check Eligibility</button>
       </form>
       <div id="eligibility-result" class="eligibility-result" style="margin-top: 20px;"></div>
-      
-      <div class="eligibility-checklist animate-fade-in" style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+      <div class="eligibility-checklist animate-fade-in"
+        style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
         <div style="background: #f0f7ff; padding: 20px; border-radius: 12px; border-left: 5px solid #1a73e8;">
           <h3 data-translate="true">✅ Mandatory Requirements</h3>
           <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
@@ -475,7 +561,8 @@
         </div>
         <div style="background: #fff9f0; padding: 20px; border-radius: 12px; border-left: 5px solid #f97316;">
           <h3 data-translate="true">🆔 Required Documents</h3>
-          <p style="font-size: 0.9rem; margin-top: 8px;" data-translate="true">Bring one of these to the polling booth:</p>
+          <p style="font-size: 0.9rem; margin-top: 8px;" data-translate="true">Bring one of these to the polling booth:
+          </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;">
             <span class="badge" data-translate="true">Voter ID (EPIC)</span>
             <span class="badge" data-translate="true">Aadhaar Card</span>
@@ -498,16 +585,20 @@
           <option value="lok-sabha-2024">Lok Sabha 2024</option>
         </select>
       </div>
-      <div id="results-dashboard" class="results-dashboard" style="margin-top: 20px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-light); padding: 20px;">
+      <div id="results-dashboard" class="results-dashboard"
+        style="margin-top: 20px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-light); padding: 20px;">
         <!-- All content here is now rendered dynamically via modules/results.js -->
-        <div id="results-chart-container" style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <div id="results-chart-container"
+          style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
           <div class="loading-spinner">⌛ Loading real-time results...</div>
         </div>
       </div>
-        
-        <div style="margin-top: 25px; padding: 15px; background: #fff; border: 1px dashed var(--border-light); border-radius: 8px; text-align: center;">
-          <p style="font-style: italic; color: var(--text-secondary);" data-translate="true">Note: Results are dynamic and based on official Election Commission data feeds.</p>
-        </div>
+
+      <div
+        style="margin-top: 25px; padding: 15px; background: #fff; border: 1px dashed var(--border-light); border-radius: 8px; text-align: center;">
+        <p style="font-style: italic; color: var(--text-secondary);" data-translate="true">Note: Results are dynamic and
+          based on official Election Commission data feeds.</p>
+      </div>
       </div>
     </section>
   </main>
@@ -515,22 +606,28 @@
   <!-- MOBILE NAV DRAWER (all sections) -->
   <div id="mobile-drawer" class="mobile-drawer" aria-label="All sections" hidden>
     <div class="drawer-grid">
-      <a href="#guide"       class="drawer-item" data-section="guide"       ><span>📋</span><span>How to Vote</span></a>
-      <a href="#glossary"    class="drawer-item" data-section="glossary"    ><span>📖</span><span>Glossary</span></a>
-      <a href="#compare"     class="drawer-item" data-section="compare"     ><span>🌐</span><span>Compare</span></a>
-      <a href="#eligibility" class="drawer-item" data-section="eligibility" ><span>✅</span><span>Eligibility</span></a>
-      <a href="#results"     class="drawer-item" data-section="results"     ><span>📊</span><span>Results</span></a>
+      <a href="#guide" class="drawer-item" data-section="guide"><span>📋</span><span>How to Vote</span></a>
+      <a href="#glossary" class="drawer-item" data-section="glossary"><span>📖</span><span>Glossary</span></a>
+      <a href="#compare" class="drawer-item" data-section="compare"><span>🌐</span><span>Compare</span></a>
+      <a href="#eligibility" class="drawer-item" data-section="eligibility"><span>✅</span><span>Eligibility</span></a>
+      <a href="#results" class="drawer-item" data-section="results"><span>📊</span><span>Results</span></a>
     </div>
   </div>
 
   <!-- BOTTOM NAV (mobile) -->
   <nav class="bottom-nav" role="navigation" aria-label="Mobile navigation">
-    <a href="#home"     class="bn-item active" id="bn-home"     data-section="home"     aria-label="Home"><span class="bn-icon" aria-hidden="true">🏠</span><span class="bn-label">Home</span></a>
-    <a href="#timeline" class="bn-item"        id="bn-timeline" data-section="timeline" aria-label="Timeline"><span class="bn-icon" aria-hidden="true">📅</span><span class="bn-label">Timeline</span></a>
-    <a href="#quiz"     class="bn-item"        id="bn-quiz"     data-section="quiz"     aria-label="Quiz"><span class="bn-icon" aria-hidden="true">🎯</span><span class="bn-label">Quiz</span></a>
-    <a href="#ai-chat"  class="bn-item"        id="bn-ai"       data-section="ai-chat" aria-label="Ask AI"><span class="bn-icon" aria-hidden="true">🤖</span><span class="bn-label">AI</span></a>
-    <a href="#booth"    class="bn-item"        id="bn-booth"    data-section="booth"    aria-label="Booth"><span class="bn-icon" aria-hidden="true">🗺️</span><span class="bn-label">Booth</span></a>
-    <button class="bn-item" id="bn-more" aria-label="More sections" aria-expanded="false"><span class="bn-icon" aria-hidden="true">☰</span><span class="bn-label">Menu</span></button>
+    <a href="#home" class="bn-item active" id="bn-home" data-section="home" aria-label="Home"><span class="bn-icon"
+        aria-hidden="true">🏠</span><span class="bn-label">Home</span></a>
+    <a href="#timeline" class="bn-item" id="bn-timeline" data-section="timeline" aria-label="Timeline"><span
+        class="bn-icon" aria-hidden="true">📅</span><span class="bn-label">Timeline</span></a>
+    <a href="#quiz" class="bn-item" id="bn-quiz" data-section="quiz" aria-label="Quiz"><span class="bn-icon"
+        aria-hidden="true">🎯</span><span class="bn-label">Quiz</span></a>
+    <a href="#ai-chat" class="bn-item" id="bn-ai" data-section="ai-chat" aria-label="Ask AI"><span class="bn-icon"
+        aria-hidden="true">🤖</span><span class="bn-label">AI</span></a>
+    <a href="#booth" class="bn-item" id="bn-booth" data-section="booth" aria-label="Booth"><span class="bn-icon"
+        aria-hidden="true">🗺️</span><span class="bn-label">Booth</span></a>
+    <button class="bn-item" id="bn-more" aria-label="More sections" aria-expanded="false"><span class="bn-icon"
+        aria-hidden="true">☰</span><span class="bn-label">Menu</span></button>
   </nav>
 
   <!-- TOAST -->
@@ -564,4 +661,5 @@
 
   <script type="module" src="app.js"></script>
 </body>
+
 </html>

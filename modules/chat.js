@@ -57,8 +57,16 @@ export const initChat = async () => {
       updateMessage(loadingId, reply);
     } catch (err) {
       console.warn('[chat] Gemini error:', err.message);
-      const fallback = getOfflineAnswer(query);
-      updateMessage(loadingId, fallback);
+      
+      // Show exact error if it's an API limit issue, otherwise fallback to offline mode
+      if (err.message && err.message.includes('Quota exceeded')) {
+        updateMessage(loadingId, `⚠️ **API Limit Reached:** Google's Free Tier allows ~15 requests per minute. You have exceeded this limit. Please wait 60 seconds and try again.`);
+      } else if (err.message && err.message.includes('API key not configured')) {
+        updateMessage(loadingId, `⚠️ **Missing API Key:** Please add a valid Gemini API key to your env-config.js file.`);
+      } else {
+        const fallback = getOfflineAnswer(query);
+        updateMessage(loadingId, fallback);
+      }
     }
   });
 

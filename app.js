@@ -24,20 +24,21 @@ import { initAnalytics } from './modules/analytics.js';
 const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
-      const registration = await navigator.serviceWorker.register('./service-worker.js', { scope: './' });
-      console.log('SW registered with scope:', registration.scope);
+      // DEVELOPMENT MODE: Force unregister Service Worker to prevent old cached versions from loading
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      for (let registration of registrations) {
+        await registration.unregister();
+        console.log('SW unregistered successfully.');
+      }
       
-      // Setup update flow
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            showToast('New update available. Refresh to apply.', 'info');
-          }
-        });
-      });
+      // Clear caches
+      if ('caches' in window) {
+        const keys = await caches.keys();
+        await Promise.all(keys.map(key => caches.delete(key)));
+        console.log('Caches cleared successfully.');
+      }
     } catch (err) {
-      console.error('SW registration failed:', err);
+      console.error('SW unregistration failed:', err);
     }
   }
 };

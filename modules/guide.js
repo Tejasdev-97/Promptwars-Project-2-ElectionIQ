@@ -29,8 +29,8 @@ export const initGuide = async () => {
 
   steps.forEach((step, index) => {
     // Find matching FAQ
-    const faq = data.faqs.find(f => f.keywords && f.keywords.includes(step.key)) || 
-                { answer: "Details available on ECI website." };
+    const faq = data.faqs.find(f => f.keywords && f.keywords.includes(step.key)) ||
+      { answer: "Details available on ECI website." };
 
     const el = document.createElement('article');
     el.className = 'step-card animate-card';
@@ -78,7 +78,7 @@ export const initGuide = async () => {
             <hr>
             <h4>Official ECI EVM Explainer Video</h4>
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 15px 0;">
-              <iframe src="https://www.youtube.com/embed/Pj13iF8l-hE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/BtsyBetcCCs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
             </div>
             <hr>
             <h4>Comparison: Paper Ballot vs EVM</h4>
