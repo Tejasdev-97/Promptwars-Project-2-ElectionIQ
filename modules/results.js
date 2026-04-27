@@ -80,7 +80,7 @@ export const initResults = () => {
     if (navigator.onLine && window.ENV?.GEMINI_API_KEY && window.ENV.GEMINI_API_KEY !== 'YOUR_GEMINI_API_KEY_HERE') {
       try {
         const apiKey = window.ENV.GEMINI_API_KEY;
-        const prompt = `Provide the live or most recent election results for India 2026 (or latest available). Respond ONLY in valid JSON format exactly like this, no markdown formatting, no backticks: { "results": { "latest-election": { "title": "Latest Election 2026", "rows": [ ["Party", "Seats", {"role":"style"}, {"role":"annotation"}], ["Party A", 100, "#FF0000", "100"] ], "note": "Latest updates." } } }`;
+        const prompt = `Provide the live or most recent election results for India. If 2026 results are not yet available, provide the final 2024 Lok Sabha or the latest 2025 state election results instead. Respond ONLY in valid JSON format exactly like this, no markdown formatting, no backticks: { "results": { "latest-election": { "title": "Latest Election (Year)", "rows": [ ["Party", "Seats", {"role":"style"}, {"role":"annotation"}], ["Party A", 100, "#FF0000", "100"] ], "note": "Brief context about these results." } } }`;
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
         
         fetch(url, {
@@ -121,33 +121,31 @@ export const initResults = () => {
     if (!window.google?.visualization) return;
     const ed = electionData[electionId] || electionData['lok-sabha-2024'];
 
+    const rowsToProcess = (ed.rows && ed.rows.length > 1) ? ed.rows.slice(1) : [['Awaiting Data', 0, '#9E9E9E', '0']];
+    const totalSeats = rowsToProcess.reduce((acc, row) => acc + (parseInt(String(row[1]).replace(/,/g, ''), 10) || 0), 0);
+    const majorityMark = 272; 
+    
     chartContainer.innerHTML = `
-      <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:center;">
-        <div id="chart-div-bar" style="flex:1; min-width:300px; height:340px;"></div>
-        <div id="chart-div-pie" style="flex:1; min-width:300px; height:340px;"></div>
-      </div>
-      <p id="chart-note" style="margin-top:12px;font-size:0.82rem;color:var(--text-muted);padding:0 8px; text-align:center;" data-translate="true">${ed.note}</p>
+      <div id="chart-div" style="width:100%;height:340px;"></div>
+      <p id="chart-note" style="margin-top:12px;font-size:0.82rem;color:var(--text-muted);padding:0 8px;" data-translate="true">${ed.note || 'Data compiled.'}</p>
     `;
 
-    // Ensure seat values are actually numbers (Gemini might return strings like "292")
-    const cleanedRows = ed.rows.map((row, index) => {
-      if (index === 0) return row; // Header row
-      const newRow = [...row];
-      if (typeof newRow[1] === 'string') {
-        newRow[1] = parseInt(newRow[1].replace(/,/g, ''), 10) || 0;
-      }
-      return newRow;
-    });
+    const data = new window.google.visualization.DataTable();
+    data.addColumn('string', 'Party');
+    data.addColumn('number', 'Seats');
+    data.addColumn({ type: 'string', role: 'style' });
+    data.addColumn({ type: 'string', role: 'annotation' });
 
-    const data = window.google.visualization.arrayToDataTable(cleanedRows);
+    rowsToProcess.forEach(r => {
+      const party = r[0] ? String(r[0]) : 'Unknown';
+      const seats = parseInt(String(r[1]).replace(/,/g, ''), 10) || 0;
+      const color = r[2] ? String(r[2]) : '#9E9E9E';
+      const annotation = r[3] ? String(r[3]) : String(seats);
+      data.addRow([party, seats, color, annotation]);
+    });
     
-    // Pie Charts do not support 'style' or 'annotation' roles. Hide them using a DataView.
-    const pieData = new window.google.visualization.DataView(data);
-    pieData.setColumns([0, 1]);
-    
-    // Bar Chart Options
     const barOptions = {
-      title: 'Seat Distribution',
+      title: ed.title || 'Seat Distribution',
       titleTextStyle: { fontSize: 15, bold: true, color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#E6EDF3' : '#1A1A2E' },
       chartArea: { width: '80%', height: '70%' },
       hAxis: { minValue: 0, gridlines: { color: '#3A3A4A' } },
@@ -158,26 +156,14 @@ export const initResults = () => {
       annotations: { alwaysOutside: false },
     };
 
-    // Pie Chart Options
-    const pieOptions = {
-      title: 'Seat Share Analysis',
-      titleTextStyle: { fontSize: 15, bold: true, color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#E6EDF3' : '#1A1A2E' },
-      chartArea: { width: '90%', height: '80%' },
-      pieHole: 0.4, // Makes it a donut chart
-      backgroundColor: 'transparent',
-      legend: { position: 'bottom', textStyle: { color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#E6EDF3' : '#1A1A2E' } },
-      animation: { startup: true, duration: 1000, easing: 'out' }
-    };
-
-    const barChart = new window.google.visualization.BarChart(document.getElementById('chart-div-bar'));
-    barChart.draw(data, barOptions);
-    
-    const pieChart = new window.google.visualization.PieChart(document.getElementById('chart-div-pie'));
-    pieChart.draw(pieData, pieOptions);
+    try {
+      const barChart = new window.google.visualization.BarChart(document.getElementById('chart-div'));
+      barChart.draw(data, barOptions);
+    } catch (err) {
+      console.warn("Failed to draw charts", err);
+    }
 
     chartDrawn = true;
-    
-    // Re-translate if needed
     import('./i18n.js').then(({ translateContentBlocks }) => translateContentBlocks());
   };
 
@@ -208,9 +194,12 @@ export const initResults = () => {
       // Offline fallback — show text table
       const ed = electionData[electionId] || electionData['lok-sabha-2024'] || Object.values(electionData)[0];
       if (!ed) return;
+      
+      const totalSeats = ed.rows.slice(1).reduce((acc, row) => acc + (parseInt(row[1]) || 0), 0);
+      
       chartContainer.innerHTML = `
         <div style="padding:24px;text-align:center;">
-          <h3 style="margin-bottom:16px;color:var(--text-primary);">${ed.title}</h3>
+          <h3 style="margin-bottom:16px;color:var(--text-primary);">${ed.title || 'Election Results'}</h3>
           <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
             <thead>
               <tr style="background:var(--bg-secondary);color:var(--text-secondary);">
@@ -219,14 +208,14 @@ export const initResults = () => {
               </tr>
             </thead>
             <tbody>
-              ${ed.rows.slice(1).map(r => `
+              ${(ed.rows && ed.rows.length > 1 ? ed.rows.slice(1) : [['Awaiting Data', 0, '#9E9E9E', '0']]).map(r => `
                 <tr style="border-bottom:1px solid var(--border-light);">
                   <td style="padding:10px 16px;font-weight:600;color:var(--text-primary);">${r[0]}</td>
-                  <td style="padding:10px 16px;text-align:right;font-weight:700;color:${r[2]};">${r[1]}</td>
+                  <td style="padding:10px 16px;text-align:right;font-weight:700;color:${r[2] || '#9E9E9E'};">${parseInt(String(r[1]).replace(/,/g, ''), 10) || 0}</td>
                 </tr>`).join('')}
             </tbody>
           </table>
-          <p style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">${ed.note}</p>
+          <p style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);">${ed.note || 'Data compiled.'}</p>
           <p style="margin-top:6px;font-size:0.8rem;color:var(--color-warning);">📡 Google Charts unavailable offline — showing text view.</p>
         </div>`;
     };

@@ -499,36 +499,11 @@
         </select>
       </div>
       <div id="results-dashboard" class="results-dashboard" style="margin-top: 20px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-light); padding: 20px;">
-        <div class="results-summary" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 15px;">
-           <div>
-             <h2 style="color: var(--brand-primary);" data-translate="true">Live Counting Status</h2>
-             <p style="font-size: 0.85rem; color: var(--text-muted);" data-translate="true">Last updated: Just now</p>
-           </div>
-           <div class="live-pulse-container" style="display: flex; align-items: center; gap: 8px;">
-             <span class="voice-pulse" style="width: 12px; height: 12px;"></span>
-             <span style="font-weight: 700; color: #d32f2f; font-size: 0.9rem;" data-translate="true">LIVE</span>
-           </div>
+        <!-- All content here is now rendered dynamically via modules/results.js -->
+        <div id="results-chart-container" style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
+          <div class="loading-spinner">⌛ Loading real-time results...</div>
         </div>
-        
-        <div class="seat-tally-container">
-           <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-             <span style="font-weight: 600;" data-translate="true">Majority Mark</span>
-             <span style="font-weight: 700; color: var(--brand-primary);">272 / 543</span>
-           </div>
-           <div class="progress-bar-total" style="height: 24px; background: var(--bg-secondary); border-radius: 12px; overflow: hidden; display: flex; position: relative;">
-             <div style="width: 55%; background: linear-gradient(90deg, #f97316, #fb923c); height: 100%;" title="NDA"></div>
-             <div style="width: 35%; background: linear-gradient(90deg, #1a73e8, #60a5fa); height: 100%;" title="INDIA"></div>
-             <div style="width: 10%; background: #94a3b8; height: 100%;" title="Others"></div>
-           </div>
-           <div style="display: flex; gap: 15px; margin-top: 12px; font-size: 0.85rem;">
-             <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 12px; height: 12px; background: #f97316; border-radius: 3px;"></span> NDA: 292</span>
-             <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 12px; height: 12px; background: #1a73e8; border-radius: 3px;"></span> INDIA: 232</span>
-             <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 12px; height: 12px; background: #94a3b8; border-radius: 3px;"></span> Oth: 19</span>
-           </div>
-        </div>
-
-        <!-- NEW CHART CONTAINER -->
-        <div id="results-chart-container" style="margin-top: 25px; min-height: 300px;"></div>
+      </div>
         
         <div style="margin-top: 25px; padding: 15px; background: #fff; border: 1px dashed var(--border-light); border-radius: 8px; text-align: center;">
           <p style="font-style: italic; color: var(--text-secondary);" data-translate="true">Note: Results are dynamic and based on official Election Commission data feeds.</p>
