@@ -101,7 +101,7 @@ export const initMaps = () => {
     const prompt = `For the location "${locationStr}" in India, what is the most likely Lok Sabha parliamentary constituency and who is the current MP as of ${new Date().getFullYear()}? Respond strictly in this JSON format: {"constituency": "Name", "mp": "Name (Party)"}. No markdown or extra text.`;
 
     try {
-      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
