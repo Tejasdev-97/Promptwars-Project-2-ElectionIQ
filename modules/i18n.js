@@ -61,7 +61,7 @@ export const translateDynamicContent = async (queries, targetLang) => {
   if (targetLang === 'en' || !queries || queries.length === 0) return queries;
   
   const apiKey = window.ENV?.GOOGLE_TRANSLATE_API_KEY;
-  if (!apiKey || apiKey.startsWith('YOUR_') || apiKey === 'AIzaSyCl99FvCto9nJUqJnS0dU7cvJ84aDDl-p0' || !navigator.onLine) {
+  if (!apiKey || apiKey.startsWith('YOUR_') || !navigator.onLine) {
     return queries; // Return original if offline or no key
   }
   

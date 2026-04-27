@@ -197,7 +197,7 @@ const askGemini = async (query) => {
   if (!navigator.onLine) throw new Error('Offline');
 
   const apiKey = window.ENV?.GEMINI_API_KEY;
-  if (!apiKey || apiKey.startsWith('YOUR_') || apiKey === 'AIzaSyCl99FvCto9nJUqJnS0dU7cvJ84aDDl-p0') throw new Error('Valid Gemini API key not configured');
+  if (!apiKey || apiKey.startsWith('YOUR_')) throw new Error('Valid Gemini API key not configured');
 
   const lang = getCurrentLang();
   let systemPrompt = `You are ElectionIQ AI, a professional expert on Indian elections. 

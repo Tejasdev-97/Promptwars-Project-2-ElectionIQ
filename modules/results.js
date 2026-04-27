@@ -44,64 +44,75 @@ export const initResults = () => {
     }
   };
 
-  const fetchRealtimeResults = async () => {
+  const processAndRender = (data) => {
+    electionData = data;
+    const currentVal = select.value;
+    
+    select.innerHTML = '';
+    for (const key in electionData) {
+      const opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = electionData[key].title;
+      select.appendChild(opt);
+    }
+    
+    if (select.options.length > 0) {
+      const exists = Array.from(select.options).some(o => o.value === currentVal);
+      select.value = exists ? currentVal : select.options[0].value;
+      if (document.getElementById('results').classList.contains('active')) {
+        loadCharts(select.value);
+      }
+    }
+  };
+
+  const loadData = () => {
+    // 1. Instant Load: Cache or Local JSON
+    const cached = localStorage.getItem('cached_results_data');
+    if (cached) {
+      processAndRender(JSON.parse(cached));
+      console.log("Results data instantly loaded from cache");
+    } else {
+      processAndRender(electionData);
+      console.log("Results data instantly loaded from local hardcoded fallback");
+    }
+
+    // 2. Background Update: Real-time Gemini API
     if (navigator.onLine && window.ENV?.GEMINI_API_KEY && window.ENV.GEMINI_API_KEY !== 'YOUR_GEMINI_API_KEY_HERE') {
       try {
         const apiKey = window.ENV.GEMINI_API_KEY;
         const prompt = `Provide the live or most recent election results for India 2026 (or latest available). Respond ONLY in valid JSON format exactly like this, no markdown formatting, no backticks: { "results": { "latest-election": { "title": "Latest Election 2026", "rows": [ ["Party", "Seats", {"role":"style"}, {"role":"annotation"}], ["Party A", 100, "#FF0000", "100"] ], "note": "Latest updates." } } }`;
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
         
-        const resp = await fetch(url, {
+        fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contents: [{ parts: [{ text: prompt }] }],
             generationConfig: { temperature: 0.1 }
           })
-        });
-
-        if (resp.ok) {
-          const result = await resp.json();
+        }).then(resp => {
+          if (resp.ok) return resp.json();
+          throw new Error('Network response was not ok');
+        }).then(result => {
           let jsonStr = result?.candidates?.[0]?.content?.parts?.[0]?.text;
           if (jsonStr) {
-            jsonStr = jsonStr.replace(/```json/g, '').replace(/```/g, '').trim();
-            const aiData = JSON.parse(jsonStr);
-            if (aiData && aiData.results) {
-              electionData = aiData.results;
-              localStorage.setItem('cached_results_data', JSON.stringify(electionData));
-              console.log("Results data loaded from real-time Gemini API");
-              
-              // Update select options
-              select.innerHTML = '';
-              for (const key in electionData) {
-                const opt = document.createElement('option');
-                opt.value = key;
-                opt.textContent = electionData[key].title;
-                select.appendChild(opt);
+            const startIdx = jsonStr.indexOf('{');
+            const endIdx = jsonStr.lastIndexOf('}');
+            if (startIdx !== -1 && endIdx !== -1) {
+              jsonStr = jsonStr.substring(startIdx, endIdx + 1);
+              const aiData = JSON.parse(jsonStr);
+              if (aiData && aiData.results) {
+                localStorage.setItem('cached_results_data', JSON.stringify(aiData.results));
+                console.log("Results updated in background from real-time Gemini API");
+                processAndRender(aiData.results);
               }
             }
           }
-        }
+        }).catch(err => {
+          console.warn("Background Gemini results fetch failed:", err);
+        });
       } catch (err) {
-        console.warn("Failed to fetch real-time results from Gemini, falling back...", err);
-        loadCachedOrFallback();
-      }
-    } else {
-      loadCachedOrFallback();
-    }
-  };
-
-  const loadCachedOrFallback = () => {
-    const cached = localStorage.getItem('cached_results_data');
-    if (cached) {
-      electionData = JSON.parse(cached);
-      console.log("Results data loaded from cache");
-      select.innerHTML = '';
-      for (const key in electionData) {
-        const opt = document.createElement('option');
-        opt.value = key;
-        opt.textContent = electionData[key].title;
-        select.appendChild(opt);
+        console.warn("Failed to init background results fetch", err);
       }
     }
   };
@@ -111,13 +122,32 @@ export const initResults = () => {
     const ed = electionData[electionId] || electionData['lok-sabha-2024'];
 
     chartContainer.innerHTML = `
-      <div id="chart-div" style="width:100%;height:340px;"></div>
-      <p id="chart-note" style="margin-top:12px;font-size:0.82rem;color:var(--text-muted);padding:0 8px;" data-translate="true">${ed.note}</p>
+      <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:center;">
+        <div id="chart-div-bar" style="flex:1; min-width:300px; height:340px;"></div>
+        <div id="chart-div-pie" style="flex:1; min-width:300px; height:340px;"></div>
+      </div>
+      <p id="chart-note" style="margin-top:12px;font-size:0.82rem;color:var(--text-muted);padding:0 8px; text-align:center;" data-translate="true">${ed.note}</p>
     `;
 
-    const data = window.google.visualization.arrayToDataTable(ed.rows);
-    const options = {
-      title: ed.title,
+    // Ensure seat values are actually numbers (Gemini might return strings like "292")
+    const cleanedRows = ed.rows.map((row, index) => {
+      if (index === 0) return row; // Header row
+      const newRow = [...row];
+      if (typeof newRow[1] === 'string') {
+        newRow[1] = parseInt(newRow[1].replace(/,/g, ''), 10) || 0;
+      }
+      return newRow;
+    });
+
+    const data = window.google.visualization.arrayToDataTable(cleanedRows);
+    
+    // Pie Charts do not support 'style' or 'annotation' roles. Hide them using a DataView.
+    const pieData = new window.google.visualization.DataView(data);
+    pieData.setColumns([0, 1]);
+    
+    // Bar Chart Options
+    const barOptions = {
+      title: 'Seat Distribution',
       titleTextStyle: { fontSize: 15, bold: true, color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#E6EDF3' : '#1A1A2E' },
       chartArea: { width: '80%', height: '70%' },
       hAxis: { minValue: 0, gridlines: { color: '#3A3A4A' } },
@@ -128,8 +158,23 @@ export const initResults = () => {
       annotations: { alwaysOutside: false },
     };
 
-    const chart = new window.google.visualization.BarChart(document.getElementById('chart-div'));
-    chart.draw(data, options);
+    // Pie Chart Options
+    const pieOptions = {
+      title: 'Seat Share Analysis',
+      titleTextStyle: { fontSize: 15, bold: true, color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#E6EDF3' : '#1A1A2E' },
+      chartArea: { width: '90%', height: '80%' },
+      pieHole: 0.4, // Makes it a donut chart
+      backgroundColor: 'transparent',
+      legend: { position: 'bottom', textStyle: { color: document.documentElement.getAttribute('data-theme') === 'dark' ? '#E6EDF3' : '#1A1A2E' } },
+      animation: { startup: true, duration: 1000, easing: 'out' }
+    };
+
+    const barChart = new window.google.visualization.BarChart(document.getElementById('chart-div-bar'));
+    barChart.draw(data, barOptions);
+    
+    const pieChart = new window.google.visualization.PieChart(document.getElementById('chart-div-pie'));
+    pieChart.draw(pieData, pieOptions);
+
     chartDrawn = true;
     
     // Re-translate if needed
@@ -137,11 +182,20 @@ export const initResults = () => {
   };
 
   const loadCharts = (electionId) => {
-    if (window.google?.visualization) {
+    if (window.google?.visualization && typeof window.google.visualization.BarChart === 'function') {
       drawChart(electionId);
       return;
     }
-    if (chartLoaded) return;
+    
+    if (chartLoaded) {
+      if (window.google?.charts) {
+        window.google.charts.setOnLoadCallback(() => drawChart(electionId));
+      } else {
+        // In rare case script tag is injected but window.google is not defined yet, try again in 500ms
+        setTimeout(() => loadCharts(electionId), 500);
+      }
+      return;
+    }
     chartLoaded = true;
 
     const script = document.createElement('script');
@@ -152,7 +206,8 @@ export const initResults = () => {
     };
     script.onerror = () => {
       // Offline fallback — show text table
-      const ed = electionData[electionId] || electionData['lok-sabha-2024'];
+      const ed = electionData[electionId] || electionData['lok-sabha-2024'] || Object.values(electionData)[0];
+      if (!ed) return;
       chartContainer.innerHTML = `
         <div style="padding:24px;text-align:center;">
           <h3 style="margin-bottom:16px;color:var(--text-primary);">${ed.title}</h3>
@@ -198,5 +253,5 @@ export const initResults = () => {
   });
   
   // Initialize real-time data fetch on load
-  fetchRealtimeResults();
+  loadData();
 };

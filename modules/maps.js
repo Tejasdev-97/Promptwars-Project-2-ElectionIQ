@@ -17,7 +17,7 @@ export const initMaps = () => {
 
   const showMap = (lat, lng, label) => {
     const mapsKey = window.ENV?.GOOGLE_MAPS_API_KEY;
-    const isGoogleKeyValid = mapsKey && !mapsKey.startsWith('YOUR_') && mapsKey !== 'AIzaSyCl99FvCto9nJUqJnS0dU7cvJ84aDDl-p0';
+    const isGoogleKeyValid = mapsKey && !mapsKey.startsWith('YOUR_');
 
     if (isGoogleKeyValid) {
       mapContainer.innerHTML = `
@@ -96,7 +96,7 @@ export const initMaps = () => {
   // Helper: Use Gemini to find MP and Constituency
   const fetchElectionDataFromAI = async (locationStr) => {
     const apiKey = window.ENV?.GEMINI_API_KEY;
-    if (!apiKey || apiKey.startsWith('YOUR_') || apiKey === 'AIzaSyCl99FvCto9nJUqJnS0dU7cvJ84aDDl-p0') return { mp: 'Unknown (Valid Gemini API Key needed)', const: 'Unknown Constituency' };
+    if (!apiKey || apiKey.startsWith('YOUR_')) return { mp: 'Unknown (Valid Gemini API Key needed)', const: 'Unknown Constituency' };
 
     const prompt = `For the location "${locationStr}" in India, what is the most likely Lok Sabha parliamentary constituency and who is the current MP as of ${new Date().getFullYear()}? Respond strictly in this JSON format: {"constituency": "Name", "mp": "Name (Party)"}. No markdown or extra text.`;
 
@@ -119,7 +119,7 @@ export const initMaps = () => {
   const processCoordinates = async (lat, lng, fallbackQuery = '') => {
     try {
       const mapsKey = window.ENV?.GOOGLE_MAPS_API_KEY;
-      const isGoogleKeyValid = mapsKey && !mapsKey.startsWith('YOUR_') && mapsKey !== 'AIzaSyCl99FvCto9nJUqJnS0dU7cvJ84aDDl-p0';
+      const isGoogleKeyValid = mapsKey && !mapsKey.startsWith('YOUR_');
 
       let state = 'India';
       let city = fallbackQuery || 'Unknown Region';
@@ -177,7 +177,7 @@ export const initMaps = () => {
 
     try {
       const mapsKey = window.ENV?.GOOGLE_MAPS_API_KEY;
-      const isGoogleKeyValid = mapsKey && !mapsKey.startsWith('YOUR_') && mapsKey !== 'AIzaSyCl99FvCto9nJUqJnS0dU7cvJ84aDDl-p0';
+      const isGoogleKeyValid = mapsKey && !mapsKey.startsWith('YOUR_');
 
       let lat, lng;
 
