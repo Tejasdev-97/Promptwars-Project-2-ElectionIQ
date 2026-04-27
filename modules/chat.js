@@ -209,9 +209,9 @@ const askGemini = async (query) => {
 
   const lang = getCurrentLang();
   let systemPrompt = `You are ElectionIQ AI, a professional expert on Indian elections. 
-Your goal is to provide a complete, well-structured, and helpful response.
-- For simple greetings (like "Hi"), provide a friendly, short response.
-- For complex questions, provide a thorough, comprehensive answer (500-1000 words if necessary) and ALWAYS finish your sentences.
+Your goal is to provide a complete, well-structured, and fast response.
+- For simple greetings, provide a friendly, short response.
+- For complex questions, provide a concise, direct answer (under 150 words max) to ensure lightning-fast loading times.
 - Never stop mid-thought or mid-sentence. 
 - Current year is ${new Date().getFullYear()}.`;
   if (lang && lang !== 'en') {
@@ -225,7 +225,7 @@ Your goal is to provide a complete, well-structured, and helpful response.
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [{ text: `${systemPrompt}\n\nUser question: ${query}` }] }],
-      generationConfig: { temperature: 0.7, maxOutputTokens: 4096, topK: 40, topP: 0.95 }
+      generationConfig: { temperature: 0.4, maxOutputTokens: 800, topK: 40, topP: 0.95 }
     })
   });
 
