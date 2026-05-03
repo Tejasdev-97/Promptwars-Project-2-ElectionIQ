@@ -20,7 +20,11 @@ import { initAccessibility } from './modules/accessibility.js';
 import { initCalendar } from './modules/calendar.js';
 import { initAnalytics } from './modules/analytics.js';
 
-// ── Service Worker Registration ──
+/**
+ * Unregisters any existing Service Workers and clears caches to ensure 
+ * the user always gets the latest version of the app.
+ * @returns {Promise<void>}
+ */
 const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
@@ -43,7 +47,9 @@ const registerServiceWorker = async () => {
   }
 };
 
-// ── Network Status ──
+/**
+ * Listens for online/offline events and updates the UI accordingly.
+ */
 const handleNetworkStatus = () => {
   const offlineBanner = document.getElementById('offline-banner');
   
@@ -65,6 +71,10 @@ const handleNetworkStatus = () => {
 
 // ── PWA Install Prompt ──
 let deferredPrompt;
+
+/**
+ * Sets up the PWA install prompt button logic.
+ */
 const setupInstallPrompt = () => {
   const installBtn = document.getElementById('pwa-install-btn');
   
@@ -89,7 +99,10 @@ const setupInstallPrompt = () => {
   });
 };
 
-// ── App Initialization ──
+/**
+ * Boots the application by initializing all core modules and features.
+ * @returns {Promise<void>}
+ */
 const initApp = async () => {
   console.log('Booting ElectionIQ...');
   
@@ -179,6 +192,9 @@ const initApp = async () => {
   }, { passive: true });
 };
 
+/**
+ * Animates numerical statistics on the home page from 0 to their target values.
+ */
 const animateStats = () => {
   const stats = document.querySelectorAll('.stat-number');
   stats.forEach(stat => {
@@ -202,6 +218,9 @@ const animateStats = () => {
   });
 };
 
+/**
+ * Sets up scroll animations and parallax effects for UI elements.
+ */
 const setupAnimations = () => {
   // 1. Intersection Observer for Scroll Animations
   const observerOptions = {

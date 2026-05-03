@@ -11,7 +11,5 @@ export const initAnalytics = () => {
 export const trackEvent = (eventName, eventParams = {}) => {
   if (typeof window.gtag === 'function') {
     window.gtag('event', eventName, eventParams);
-  } else {
-    console.log(`[Analytics Mock] Event: ${eventName}`, eventParams);
-  }
+    // console.log(`[Analytics Mock] Event: ${eventName}`, eventParams);
 };

@@ -43,11 +43,9 @@ export const initTimeline = async () => {
     const cached = localStorage.getItem('cached_timeline_data');
     if (cached) {
       processAndRender(JSON.parse(cached));
-      console.log("Timeline data instantly loaded from cache");
     } else {
       const localData = await fetchJSON('data/elections-india.json');
       processAndRender(localData);
-      console.log("Timeline data instantly loaded from local JSON");
     }
 
     // Auto-detect location once
@@ -100,7 +98,6 @@ export const initTimeline = async () => {
               const aiData = JSON.parse(jsonStr);
               if (aiData && aiData.elections) {
                 localStorage.setItem('cached_timeline_data', JSON.stringify(aiData));
-                console.log("Timeline updated in background from real-time Gemini API");
                 processAndRender(aiData);
               }
             }
